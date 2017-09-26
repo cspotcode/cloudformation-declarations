@@ -1,0 +1,37 @@
+{
+  "name": "cloudformation-json-schema",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "ts-node -F ./src/index.ts"
+  },
+  "keywords": [
+    "AWS",
+    "Cloudformation",
+    "TypeScript"
+  ],
+  "author": "Andrew Bradley <cspotcode@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/bluebird": "^3.5.12",
+    "@types/glob": "^5.0.32",
+    "@types/jquery": "^3.2.12",
+    "@types/jsdom": "^11.0.2",
+    "@types/lodash": "^4.14.74",
+    "@types/mkdirp": "^0.5.1",
+    "@types/node": "^8.0.30",
+    "@types/request-promise": "^4.1.37",
+    "bluebird": "^3.5.0",
+    "glob": "^7.1.2",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.2.0",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "outdent": "^0.3.0",
+    "request": "^2.82.0",
+    "request-promise": "^4.2.2",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.2"
+  }
+}
