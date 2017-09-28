@@ -14,8 +14,11 @@ export function JQueryFactory(w: Window): JQueryStatic {
     return (__JQueryImport as any)(w);
 }
 
-// Simple template renderer that uses ES6 template literals with interpolated values.
-// Arrays are concatenated.  false, null, and undefined are coerced to empty strings.
+/**
+ * Simple template renderer that uses ES6 template literals with interpolated values.
+ * Arrays are concatenated.  false, null, and undefined are coerced to empty strings.
+ * Functions are invoked and their result rendered per the rules above.
+ */ 
 export function template(tmpl: TemplateStringsArray, ...values: Array<any>): string {
     let acc = '';
     for(let i = 0; i < tmpl.length; i++) {
@@ -29,6 +32,7 @@ export function template(tmpl: TemplateStringsArray, ...values: Array<any>): str
     function valueToString(val: any): string {
         if(val === false || val == null) return '';
         if(typeof val === 'string') return val;
+        if(typeof val === 'function') return valueToString(val());
         if(val instanceof Array) {
             return val.map(v => valueToString(v)).join('');
         }

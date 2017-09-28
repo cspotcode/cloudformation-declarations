@@ -1,13 +1,28 @@
-# Auto-Generated TypeScript declarations for CloudFormation Resources and Properties based on Amazon's specification files.
+# TypeScript declarations for CloudFormation (WIP)
 
 TypeScript declarations for writing CloudFormation stack templates, automatically generated from Amazon's specification files.
 
-Write your CloudFormation stack template in JavaScript with IntelliSense provided by these declarations.
-Then `JSON.stringify()` it to a file and send to AWS.
+Write your CloudFormation stack template in JavaScript or TypeScript with full IntelliSense from these declarations.
+Then `JSON.stringify()` the result to a `.json` file.
 
-## Just want the declaration file?
+## Usage:
 
-[generated-declarations/aws-cloudformation.ts](generated-declarations/aws-cloudformation.ts)
+Import this module and it'll give you all the helpers and interfaces.
+
+For example:
+
+```typescript
+import {AWS, Template} from 'cloudformation-declarations';
+const template: Template = {
+    Resources: {
+        loadBalancer: AWS.ElasticLoadBalancing.LoadBalancer({
+            Properties: {
+                Listeners: /*...*/
+            }
+        })
+    }
+}
+```
 
 # To rebuild
 

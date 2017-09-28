@@ -1,6 +1,7 @@
+// schema of the JSON specification file that we parse and convert into .ts declarations.
 
 export interface SpecFile {
-    ResourceType: SpecTypes;
+    ResourceTypes: SpecTypes;
     PropertyTypes: SpecTypes;
 }
 export interface SpecTypes {

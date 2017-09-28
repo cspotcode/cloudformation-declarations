@@ -1,15 +1,17 @@
 {
-  "name": "cloudformation-json-schema",
-  "version": "1.0.0",
-  "description": "",
+  "name": "cloudformation-declarations",
+  "version": "0.0.1",
+  "description": "TypeScript declarations and helpers for writing CloudFormation templates in TS or JS.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "ts-node -F ./src/index.ts"
+    "generate": "ts-node -F ./src/index.ts ; cd declarations ; typedoc --out ../docs ."
   },
   "keywords": [
     "AWS",
-    "Cloudformation",
-    "TypeScript"
+    "CloudFormation",
+    "TypeScript",
+    "Intellisense",
+    "code completion"
   ],
   "author": "Andrew Bradley <cspotcode@gmail.com>",
   "license": "MIT",
@@ -32,6 +34,15 @@
     "request": "^2.82.0",
     "request-promise": "^4.2.2",
     "ts-node": "^3.3.0",
+    "typedoc": "^0.8.0",
     "typescript": "^2.5.2"
-  }
+  },
+  "files": [
+    "declarations",
+    "docs",
+    "specifications",
+    "src",
+    "README.md",
+    "tsconfig.json"
+  ]
 }

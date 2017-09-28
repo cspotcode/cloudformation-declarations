@@ -1,5 +1,5 @@
 import {sync as globSync} from 'glob';
-import {toPairs, map, each, includes, fromPairs, without} from 'lodash';
+import { toPairs, map, each, includes, fromPairs, without, sortBy } from 'lodash';
 import outdent from 'outdent';
 import * as assert from 'assert';
 import * as request from 'request-promise';
@@ -9,7 +9,7 @@ import { JSDOM } from 'jsdom';
 import { SpecFile, SpecType, SpecProperty } from './spec-file';
 
 const paths = {
-    generatedDeclaration: 'generated-declarations/aws-cloudformation.ts',
+    generatedDeclaration: 'declarations/generated/aws-cloudformation.ts',
     docsCache: 'cache/html-docs.json',
     specificationsDirectory: 'specifications'
 };
@@ -47,7 +47,7 @@ async function main() {
         await asyncEach(toPairs(specs), async ([path, spec]) => {
             await asyncEach([
                 ...toPairs(spec.PropertyTypes),
-                ...toPairs(spec.ResourceType)
+                ...toPairs(spec.ResourceTypes)
             ], cb);
             async function cb([name, type]: [string, SpecType]) {
                 createType(name);
@@ -73,67 +73,99 @@ async function main() {
         writeJsonFile(paths.docsCache, docs);
     }
 
+    const allResourceTypes: Array<string> = [];
+
     /** Generated type declaration .ts */
     const declaration = t `
-    type TODO = any;
-    type CFString = string;
-    type CFBoolean = boolean;
-    type CFInteger = number;
-    type CFDouble = number;
-    type CFLong = number;
-    type CFTimestamp = string; // TODO
-    type CFJson = object; // TODO
-    type CFList<T> = Array<T>;
-    type CFMap<T> = Map<string, T>;
-
+    export * from '../common';
+    import * as C from '../common';
     ${
         map(specs, (spec, path) => {
             const specJson: SpecFile = readJsonFile(`specifications/${ path }`);
 
+            const allDeclarations = sortBy([
+                ...toPairs(specJson.ResourceTypes).map(v => [...v, 'resource']),
+                ...toPairs(specJson.PropertyTypes).map(v => [...v, 'property'])
+            ], v => v[0]);
+
             return t`
-                ${ map(specJson.ResourceType, renderType) }
-                ${ map(specJson.PropertyTypes, renderType) }
+                ${ map(allDeclarations, ([k, v, type]) => renderType(v, k, type)) }
             `;
 
-            function renderType(v: SpecType, k: string) {
+            function renderType(v: SpecType, k: string, specType: 'resource' | 'property') {
+                const isResource = specType === 'resource';
                 const nameParts = k.split(/::|\./);
                 const namespace = nameParts.slice(0, -1).join('.');
-                const name = nameParts[nameParts.length - 1];
-                const fullName = namespace ? `${ namespace }.${ name }` : `${ name }`;
+                const identifier = nameParts[nameParts.length - 1];
+                const identifierPath = namespace ? `${ namespace }.${ identifier }` : `${ identifier }`;
+                if(isResource) allResourceTypes.push(identifierPath);
+                const propertiesIdentifierPath = `${ identifierPath }.Properties`;
 
                 const $ = get$(v.Documentation);
 
-                log(`Generating declaration for ${ fullName }...`);
+                // Emit `declaration` and wrap it in a namespace declaration if necessary
+                function declarationInNamespace(identifierPath: string, declaration: any) {
+                    const namespace = identifierPath.split('.').slice(0, -1).join('.');
+                    return t `
+                        ${ namespace && `export namespace ${ namespace } {`}
+                            ${ declaration }
+                        ${ namespace && `}` }
+                    `;
+                }
+
+                log(`Generating declaration for ${ identifierPath }...`);
+                const description = $('.topictitle+p').text();
+
                 return t `
-                    ${ namespace && `export namespace ${ namespace } {` }
+                    ${ isResource && declarationInNamespace(identifierPath, t `
                         /**
-                         * ${ $('.topictitle+p').text() }
+                         * ${ description }
                          * 
                          * Documentation: ${ v.Documentation }
                          */
-                        export interface ${ name } {
+                        export interface ${ identifier } {
+                            Type: '${ k }' = '${ k }';
+                            Properties: ${ propertiesIdentifierPath }
+                        }
+                        /**
+                         * ${ description }
+                         * 
+                         * Documentation: ${ v.Documentation }
+                         */
+                        export function ${ identifier }(props: C.Omit<${ identifier }, 'Type'>): ${ identifier } {
+                            return Object.assign({Type: '${ k }'}, props);
+                        }
+                    `) }
+                    ${ declarationInNamespace(isResource ? `${ identifierPath }.Properties` : identifierPath, t `
+                        export interface ${ isResource ? 'Properties' : identifier } {
                             ${
                                 map(v.Properties, (prop, propName) => {
                                     const $dt = $('.variablelist>dl>dt').filter((i, e) => $(e).text() === propName);
                                     const $dd = $dt.find('+*');
+                                    const description = $dd.find('>p').eq(0).text();
+                                    const type = $dd.find('>p>em').filter((i, e) => $(e).text() === 'Type').parent().text().slice(6);
                                     return t `
                                         /**
-                                         * ${ $dd.find('>p').eq(0).text() }
+                                         * ${ type }
                                          * 
-                                         * Documentation: ${ prop.Documentation }
+                                         * ${ description }
+                                         * 
                                          * UpdateType: ${ prop.UpdateType }
+                                         * Documentation: ${ prop.Documentation }
                                          */
-                                        ${ propName }${!prop.Required && '?'}: ${ renderTypeString(prop, rootNamespace.getOrCreateChildNamespace(fullName)) };
+                                        ${ propName }${!prop.Required && '?'}: ${ renderTypeString(prop, rootNamespace.getOrCreateChildNamespace(identifierPath)) };
 
                                     `;
                                 })
                             }
                         }
-                    ${ namespace && `}` }
+                    `) }
                 `;
             }
         })
-    }`;
+    }
+    export type Resource =\n${ allResourceTypes.join('\n| ') };
+    `;
 
     function parseTypeName(fullName: string) {
         const nameParts = fullName.split(/::|\./);
@@ -149,9 +181,9 @@ async function main() {
         }
         if(prop.Type) {
             if(prop.PrimitiveItemType) {
-                return `${ renderPropertyType(prop.Type, relativeTo) }<${ renderPrimitiveType(prop.PrimitiveItemType) }>`;
+                return `${ renderPropertyType(prop.Type, relativeTo, [renderPrimitiveType(prop.PrimitiveItemType)]) }`;
             } else if(prop.ItemType) {
-                return `${ renderPropertyType(prop.Type, relativeTo) }<${ renderPropertyType(prop.ItemType, relativeTo) }>`;
+                return `${ renderPropertyType(prop.Type, relativeTo, [renderPropertyType(prop.ItemType, relativeTo)]) }`;
             } else {
                 return `${ renderPropertyType(prop.Type, relativeTo) }`;
             }
@@ -159,13 +191,18 @@ async function main() {
         throw new Error('Unexpected property');
     }
     function renderPrimitiveType(prim: string): string {
-        return `CF${ prim }`;
+        if(includes(['Boolean', 'String'], prim)) {
+            return `C.Yields${ prim }`;
+        } else {
+            return `C.Yields<C.CF${ prim }>`;
+        }
     }
-    function renderPropertyType(findName: string, relativeTo: Namespace): string {
-        if(includes(['Map', 'List'], findName)) return `CF${ findName }`;
+    function renderPropertyType(findName: string, relativeTo: Namespace, generics?: Array<string>): string {
+        const genericsStr = generics && generics.length ? `<${ generics.join(', ') }>` : '';
+        if(includes(['Map', 'List'], findName)) return `C.Yields<C.CF${ findName }${ genericsStr }>`;
         const ret = relativeTo.resolveType(findName)!.fullName();
         assert(typeof ret === 'string');
-        return ret!;
+        return `C.Yields<${ ret }${ genericsStr }>`;
     }
 
     writeFile(paths.generatedDeclaration, prettyPrintTs(declaration));
