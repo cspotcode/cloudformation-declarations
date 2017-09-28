@@ -1,6 +1,4 @@
 // Very WIP typings for a CloudFormation stack template
-export * from './common';
-export * from './generated/aws-cloudformation';
 
 import { TODO, BooleanCondition, CFString, CFInteger, CFBoolean } from './common';
 import { Resource } from './generated/aws-cloudformation';

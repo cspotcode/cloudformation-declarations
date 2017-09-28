@@ -21,7 +21,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html
      */
     export function Account(props: C.Omit<Account, 'Type'>): Account {
-        return Object.assign({ Type: 'AWS::ApiGateway::Account' }, props);
+        return { Type: 'AWS::ApiGateway::Account', ...props };
     }
 }
 export namespace AWS.ApiGateway.Account {
@@ -62,7 +62,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html
      */
     export function ApiKey(props: C.Omit<ApiKey, 'Type'>): ApiKey {
-        return Object.assign({ Type: 'AWS::ApiGateway::ApiKey' }, props);
+        return { Type: 'AWS::ApiGateway::ApiKey', ...props };
     }
 }
 export namespace AWS.ApiGateway.ApiKey {
@@ -160,7 +160,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html
      */
     export function Authorizer(props: C.Omit<Authorizer, 'Type'>): Authorizer {
-        return Object.assign({ Type: 'AWS::ApiGateway::Authorizer' }, props);
+        return { Type: 'AWS::ApiGateway::Authorizer', ...props };
     }
 }
 export namespace AWS.ApiGateway.Authorizer {
@@ -294,7 +294,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html
      */
     export function BasePathMapping(props: C.Omit<BasePathMapping, 'Type'>): BasePathMapping {
-        return Object.assign({ Type: 'AWS::ApiGateway::BasePathMapping' }, props);
+        return { Type: 'AWS::ApiGateway::BasePathMapping', ...props };
     }
 }
 export namespace AWS.ApiGateway.BasePathMapping {
@@ -366,7 +366,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-clientcertificate.html
      */
     export function ClientCertificate(props: C.Omit<ClientCertificate, 'Type'>): ClientCertificate {
-        return Object.assign({ Type: 'AWS::ApiGateway::ClientCertificate' }, props);
+        return { Type: 'AWS::ApiGateway::ClientCertificate', ...props };
     }
 }
 export namespace AWS.ApiGateway.ClientCertificate {
@@ -403,7 +403,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html
      */
     export function Deployment(props: C.Omit<Deployment, 'Type'>): Deployment {
-        return Object.assign({ Type: 'AWS::ApiGateway::Deployment' }, props);
+        return { Type: 'AWS::ApiGateway::Deployment', ...props };
     }
 }
 export namespace AWS.ApiGateway.Deployment {
@@ -770,7 +770,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html
      */
     export function DocumentationPart(props: C.Omit<DocumentationPart, 'Type'>): DocumentationPart {
-        return Object.assign({ Type: 'AWS::ApiGateway::DocumentationPart' }, props);
+        return { Type: 'AWS::ApiGateway::DocumentationPart', ...props };
     }
 }
 export namespace AWS.ApiGateway.DocumentationPart {
@@ -884,7 +884,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html
      */
     export function DocumentationVersion(props: C.Omit<DocumentationVersion, 'Type'>): DocumentationVersion {
-        return Object.assign({ Type: 'AWS::ApiGateway::DocumentationVersion' }, props);
+        return { Type: 'AWS::ApiGateway::DocumentationVersion', ...props };
     }
 }
 export namespace AWS.ApiGateway.DocumentationVersion {
@@ -939,7 +939,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html
      */
     export function DomainName(props: C.Omit<DomainName, 'Type'>): DomainName {
-        return Object.assign({ Type: 'AWS::ApiGateway::DomainName' }, props);
+        return { Type: 'AWS::ApiGateway::DomainName', ...props };
     }
 }
 export namespace AWS.ApiGateway.DomainName {
@@ -995,7 +995,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html
      */
     export function GatewayResponse(props: C.Omit<GatewayResponse, 'Type'>): GatewayResponse {
-        return Object.assign({ Type: 'AWS::ApiGateway::GatewayResponse' }, props);
+        return { Type: 'AWS::ApiGateway::GatewayResponse', ...props };
     }
 }
 export namespace AWS.ApiGateway.GatewayResponse {
@@ -1075,7 +1075,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html
      */
     export function Method(props: C.Omit<Method, 'Type'>): Method {
-        return Object.assign({ Type: 'AWS::ApiGateway::Method' }, props);
+        return { Type: 'AWS::ApiGateway::Method', ...props };
     }
 }
 export namespace AWS.ApiGateway.Method {
@@ -1426,7 +1426,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html
      */
     export function Model(props: C.Omit<Model, 'Type'>): Model {
-        return Object.assign({ Type: 'AWS::ApiGateway::Model' }, props);
+        return { Type: 'AWS::ApiGateway::Model', ...props };
     }
 }
 export namespace AWS.ApiGateway.Model {
@@ -1514,7 +1514,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html
      */
     export function RequestValidator(props: C.Omit<RequestValidator, 'Type'>): RequestValidator {
-        return Object.assign({ Type: 'AWS::ApiGateway::RequestValidator' }, props);
+        return { Type: 'AWS::ApiGateway::RequestValidator', ...props };
     }
 }
 export namespace AWS.ApiGateway.RequestValidator {
@@ -1581,7 +1581,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html
      */
     export function Resource(props: C.Omit<Resource, 'Type'>): Resource {
-        return Object.assign({ Type: 'AWS::ApiGateway::Resource' }, props);
+        return { Type: 'AWS::ApiGateway::Resource', ...props };
     }
 }
 export namespace AWS.ApiGateway.Resource {
@@ -1645,7 +1645,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html
      */
     export function RestApi(props: C.Omit<RestApi, 'Type'>): RestApi {
-        return Object.assign({ Type: 'AWS::ApiGateway::RestApi' }, props);
+        return { Type: 'AWS::ApiGateway::RestApi', ...props };
     }
 }
 export namespace AWS.ApiGateway.RestApi {
@@ -1816,7 +1816,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html
      */
     export function Stage(props: C.Omit<Stage, 'Type'>): Stage {
-        return Object.assign({ Type: 'AWS::ApiGateway::Stage' }, props);
+        return { Type: 'AWS::ApiGateway::Stage', ...props };
     }
 }
 export namespace AWS.ApiGateway.Stage {
@@ -2047,7 +2047,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html
      */
     export function UsagePlan(props: C.Omit<UsagePlan, 'Type'>): UsagePlan {
-        return Object.assign({ Type: 'AWS::ApiGateway::UsagePlan' }, props);
+        return { Type: 'AWS::ApiGateway::UsagePlan', ...props };
     }
 }
 export namespace AWS.ApiGateway.UsagePlan {
@@ -2218,7 +2218,7 @@ export namespace AWS.ApiGateway {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html
      */
     export function UsagePlanKey(props: C.Omit<UsagePlanKey, 'Type'>): UsagePlanKey {
-        return Object.assign({ Type: 'AWS::ApiGateway::UsagePlanKey' }, props);
+        return { Type: 'AWS::ApiGateway::UsagePlanKey', ...props };
     }
 }
 export namespace AWS.ApiGateway.UsagePlanKey {
@@ -2279,7 +2279,7 @@ export namespace AWS.ApplicationAutoScaling {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html
      */
     export function ScalableTarget(props: C.Omit<ScalableTarget, 'Type'>): ScalableTarget {
-        return Object.assign({ Type: 'AWS::ApplicationAutoScaling::ScalableTarget' }, props);
+        return { Type: 'AWS::ApplicationAutoScaling::ScalableTarget', ...props };
     }
 }
 export namespace AWS.ApplicationAutoScaling.ScalableTarget {
@@ -2381,7 +2381,7 @@ export namespace AWS.ApplicationAutoScaling {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html
      */
     export function ScalingPolicy(props: C.Omit<ScalingPolicy, 'Type'>): ScalingPolicy {
-        return Object.assign({ Type: 'AWS::ApplicationAutoScaling::ScalingPolicy' }, props);
+        return { Type: 'AWS::ApplicationAutoScaling::ScalingPolicy', ...props };
     }
 }
 export namespace AWS.ApplicationAutoScaling.ScalingPolicy {
@@ -2784,7 +2784,7 @@ export namespace AWS.AutoScaling {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html
      */
     export function AutoScalingGroup(props: C.Omit<AutoScalingGroup, 'Type'>): AutoScalingGroup {
-        return Object.assign({ Type: 'AWS::AutoScaling::AutoScalingGroup' }, props);
+        return { Type: 'AWS::AutoScaling::AutoScalingGroup', ...props };
     }
 }
 export namespace AWS.AutoScaling.AutoScalingGroup {
@@ -3110,7 +3110,7 @@ export namespace AWS.AutoScaling {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html
      */
     export function LaunchConfiguration(props: C.Omit<LaunchConfiguration, 'Type'>): LaunchConfiguration {
-        return Object.assign({ Type: 'AWS::AutoScaling::LaunchConfiguration' }, props);
+        return { Type: 'AWS::AutoScaling::LaunchConfiguration', ...props };
     }
 }
 export namespace AWS.AutoScaling.LaunchConfiguration {
@@ -3490,7 +3490,7 @@ export namespace AWS.AutoScaling {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html
      */
     export function LifecycleHook(props: C.Omit<LifecycleHook, 'Type'>): LifecycleHook {
-        return Object.assign({ Type: 'AWS::AutoScaling::LifecycleHook' }, props);
+        return { Type: 'AWS::AutoScaling::LifecycleHook', ...props };
     }
 }
 export namespace AWS.AutoScaling.LifecycleHook {
@@ -3613,7 +3613,7 @@ export namespace AWS.AutoScaling {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html
      */
     export function ScalingPolicy(props: C.Omit<ScalingPolicy, 'Type'>): ScalingPolicy {
-        return Object.assign({ Type: 'AWS::AutoScaling::ScalingPolicy' }, props);
+        return { Type: 'AWS::AutoScaling::ScalingPolicy', ...props };
     }
 }
 export namespace AWS.AutoScaling.ScalingPolicy {
@@ -3963,7 +3963,7 @@ export namespace AWS.AutoScaling {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html
      */
     export function ScheduledAction(props: C.Omit<ScheduledAction, 'Type'>): ScheduledAction {
-        return Object.assign({ Type: 'AWS::AutoScaling::ScheduledAction' }, props);
+        return { Type: 'AWS::AutoScaling::ScheduledAction', ...props };
     }
 }
 export namespace AWS.AutoScaling.ScheduledAction {
@@ -4078,7 +4078,7 @@ export namespace AWS.Batch {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html
      */
     export function ComputeEnvironment(props: C.Omit<ComputeEnvironment, 'Type'>): ComputeEnvironment {
-        return Object.assign({ Type: 'AWS::Batch::ComputeEnvironment' }, props);
+        return { Type: 'AWS::Batch::ComputeEnvironment', ...props };
     }
 }
 export namespace AWS.Batch.ComputeEnvironment {
@@ -4316,7 +4316,7 @@ export namespace AWS.Batch {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html
      */
     export function JobDefinition(props: C.Omit<JobDefinition, 'Type'>): JobDefinition {
-        return Object.assign({ Type: 'AWS::Batch::JobDefinition' }, props);
+        return { Type: 'AWS::Batch::JobDefinition', ...props };
     }
 }
 export namespace AWS.Batch.JobDefinition {
@@ -4741,7 +4741,7 @@ export namespace AWS.Batch {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html
      */
     export function JobQueue(props: C.Omit<JobQueue, 'Type'>): JobQueue {
-        return Object.assign({ Type: 'AWS::Batch::JobQueue' }, props);
+        return { Type: 'AWS::Batch::JobQueue', ...props };
     }
 }
 export namespace AWS.Batch.JobQueue {
@@ -4848,7 +4848,7 @@ export namespace AWS.CertificateManager {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html
      */
     export function Certificate(props: C.Omit<Certificate, 'Type'>): Certificate {
-        return Object.assign({ Type: 'AWS::CertificateManager::Certificate' }, props);
+        return { Type: 'AWS::CertificateManager::Certificate', ...props };
     }
 }
 export namespace AWS.CertificateManager.Certificate {
@@ -4948,7 +4948,7 @@ export namespace AWS.CloudFormation {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html
      */
     export function CustomResource(props: C.Omit<CustomResource, 'Type'>): CustomResource {
-        return Object.assign({ Type: 'AWS::CloudFormation::CustomResource' }, props);
+        return { Type: 'AWS::CloudFormation::CustomResource', ...props };
     }
 }
 export namespace AWS.CloudFormation.CustomResource {
@@ -4989,7 +4989,7 @@ export namespace AWS.CloudFormation {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html
      */
     export function Stack(props: C.Omit<Stack, 'Type'>): Stack {
-        return Object.assign({ Type: 'AWS::CloudFormation::Stack' }, props);
+        return { Type: 'AWS::CloudFormation::Stack', ...props };
     }
 }
 export namespace AWS.CloudFormation.Stack {
@@ -5076,7 +5076,7 @@ export namespace AWS.CloudFormation {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html
      */
     export function WaitCondition(props: C.Omit<WaitCondition, 'Type'>): WaitCondition {
-        return Object.assign({ Type: 'AWS::CloudFormation::WaitCondition' }, props);
+        return { Type: 'AWS::CloudFormation::WaitCondition', ...props };
     }
 }
 export namespace AWS.CloudFormation.WaitCondition {
@@ -5145,7 +5145,7 @@ export namespace AWS.CloudFormation {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html
      */
     export function WaitConditionHandle(props: C.Omit<WaitConditionHandle, 'Type'>): WaitConditionHandle {
-        return Object.assign({ Type: 'AWS::CloudFormation::WaitConditionHandle' }, props);
+        return { Type: 'AWS::CloudFormation::WaitConditionHandle', ...props };
     }
 }
 export namespace AWS.CloudFormation.WaitConditionHandle {
@@ -5178,7 +5178,7 @@ export namespace AWS.CloudFront {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution.html
      */
     export function Distribution(props: C.Omit<Distribution, 'Type'>): Distribution {
-        return Object.assign({ Type: 'AWS::CloudFront::Distribution' }, props);
+        return { Type: 'AWS::CloudFront::Distribution', ...props };
     }
 }
 export namespace AWS.CloudFront.Distribution {
@@ -6166,7 +6166,7 @@ export namespace AWS.CloudTrail {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html
      */
     export function Trail(props: C.Omit<Trail, 'Type'>): Trail {
-        return Object.assign({ Type: 'AWS::CloudTrail::Trail' }, props);
+        return { Type: 'AWS::CloudTrail::Trail', ...props };
     }
 }
 export namespace AWS.CloudTrail.Trail {
@@ -6415,7 +6415,7 @@ export namespace AWS.CloudWatch {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html
      */
     export function Alarm(props: C.Omit<Alarm, 'Type'>): Alarm {
-        return Object.assign({ Type: 'AWS::CloudWatch::Alarm' }, props);
+        return { Type: 'AWS::CloudWatch::Alarm', ...props };
     }
 }
 export namespace AWS.CloudWatch.Alarm {
@@ -6691,7 +6691,7 @@ export namespace AWS.CloudWatch {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html
      */
     export function Dashboard(props: C.Omit<Dashboard, 'Type'>): Dashboard {
-        return Object.assign({ Type: 'AWS::CloudWatch::Dashboard' }, props);
+        return { Type: 'AWS::CloudWatch::Dashboard', ...props };
     }
 }
 export namespace AWS.CloudWatch.Dashboard {
@@ -6740,7 +6740,7 @@ export namespace AWS.CodeBuild {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html
      */
     export function Project(props: C.Omit<Project, 'Type'>): Project {
-        return Object.assign({ Type: 'AWS::CodeBuild::Project' }, props);
+        return { Type: 'AWS::CodeBuild::Project', ...props };
     }
 }
 export namespace AWS.CodeBuild.Project {
@@ -7145,7 +7145,7 @@ export namespace AWS.CodeCommit {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html
      */
     export function Repository(props: C.Omit<Repository, 'Type'>): Repository {
-        return Object.assign({ Type: 'AWS::CodeCommit::Repository' }, props);
+        return { Type: 'AWS::CodeCommit::Repository', ...props };
     }
 }
 export namespace AWS.CodeCommit.Repository {
@@ -7283,7 +7283,7 @@ export namespace AWS.CodeDeploy {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html
      */
     export function Application(props: C.Omit<Application, 'Type'>): Application {
-        return Object.assign({ Type: 'AWS::CodeDeploy::Application' }, props);
+        return { Type: 'AWS::CodeDeploy::Application', ...props };
     }
 }
 export namespace AWS.CodeDeploy.Application {
@@ -7331,7 +7331,7 @@ export namespace AWS.CodeDeploy {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html
      */
     export function DeploymentConfig(props: C.Omit<DeploymentConfig, 'Type'>): DeploymentConfig {
-        return Object.assign({ Type: 'AWS::CodeDeploy::DeploymentConfig' }, props);
+        return { Type: 'AWS::CodeDeploy::DeploymentConfig', ...props };
     }
 }
 export namespace AWS.CodeDeploy.DeploymentConfig {
@@ -7420,7 +7420,7 @@ export namespace AWS.CodeDeploy {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html
      */
     export function DeploymentGroup(props: C.Omit<DeploymentGroup, 'Type'>): DeploymentGroup {
-        return Object.assign({ Type: 'AWS::CodeDeploy::DeploymentGroup' }, props);
+        return { Type: 'AWS::CodeDeploy::DeploymentGroup', ...props };
     }
 }
 export namespace AWS.CodeDeploy.DeploymentGroup {
@@ -8048,7 +8048,7 @@ export namespace AWS.CodePipeline {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html
      */
     export function CustomActionType(props: C.Omit<CustomActionType, 'Type'>): CustomActionType {
-        return Object.assign({ Type: 'AWS::CodePipeline::CustomActionType' }, props);
+        return { Type: 'AWS::CodePipeline::CustomActionType', ...props };
     }
 }
 export namespace AWS.CodePipeline.CustomActionType {
@@ -8318,7 +8318,7 @@ export namespace AWS.CodePipeline {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html
      */
     export function Pipeline(props: C.Omit<Pipeline, 'Type'>): Pipeline {
-        return Object.assign({ Type: 'AWS::CodePipeline::Pipeline' }, props);
+        return { Type: 'AWS::CodePipeline::Pipeline', ...props };
     }
 }
 export namespace AWS.CodePipeline.Pipeline {
@@ -8746,7 +8746,7 @@ export namespace AWS.Cognito {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html
      */
     export function IdentityPool(props: C.Omit<IdentityPool, 'Type'>): IdentityPool {
-        return Object.assign({ Type: 'AWS::Cognito::IdentityPool' }, props);
+        return { Type: 'AWS::Cognito::IdentityPool', ...props };
     }
 }
 export namespace AWS.Cognito.IdentityPool {
@@ -8975,7 +8975,7 @@ export namespace AWS.Cognito {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html
      */
     export function IdentityPoolRoleAttachment(props: C.Omit<IdentityPoolRoleAttachment, 'Type'>): IdentityPoolRoleAttachment {
-        return Object.assign({ Type: 'AWS::Cognito::IdentityPoolRoleAttachment' }, props);
+        return { Type: 'AWS::Cognito::IdentityPoolRoleAttachment', ...props };
     }
 }
 export namespace AWS.Cognito.IdentityPoolRoleAttachment {
@@ -9133,7 +9133,7 @@ export namespace AWS.Cognito {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html
      */
     export function UserPool(props: C.Omit<UserPool, 'Type'>): UserPool {
-        return Object.assign({ Type: 'AWS::Cognito::UserPool' }, props);
+        return { Type: 'AWS::Cognito::UserPool', ...props };
     }
 }
 export namespace AWS.Cognito.UserPool {
@@ -9750,7 +9750,7 @@ export namespace AWS.Cognito {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html
      */
     export function UserPoolClient(props: C.Omit<UserPoolClient, 'Type'>): UserPoolClient {
-        return Object.assign({ Type: 'AWS::Cognito::UserPoolClient' }, props);
+        return { Type: 'AWS::Cognito::UserPoolClient', ...props };
     }
 }
 export namespace AWS.Cognito.UserPoolClient {
@@ -9849,7 +9849,7 @@ export namespace AWS.Cognito {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html
      */
     export function UserPoolGroup(props: C.Omit<UserPoolGroup, 'Type'>): UserPoolGroup {
-        return Object.assign({ Type: 'AWS::Cognito::UserPoolGroup' }, props);
+        return { Type: 'AWS::Cognito::UserPoolGroup', ...props };
     }
 }
 export namespace AWS.Cognito.UserPoolGroup {
@@ -9934,7 +9934,7 @@ export namespace AWS.Cognito {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html
      */
     export function UserPoolUser(props: C.Omit<UserPoolUser, 'Type'>): UserPoolUser {
-        return Object.assign({ Type: 'AWS::Cognito::UserPoolUser' }, props);
+        return { Type: 'AWS::Cognito::UserPoolUser', ...props };
     }
 }
 export namespace AWS.Cognito.UserPoolUser {
@@ -10074,7 +10074,7 @@ export namespace AWS.Cognito {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html
      */
     export function UserPoolUserToGroupAttachment(props: C.Omit<UserPoolUserToGroupAttachment, 'Type'>): UserPoolUserToGroupAttachment {
-        return Object.assign({ Type: 'AWS::Cognito::UserPoolUserToGroupAttachment' }, props);
+        return { Type: 'AWS::Cognito::UserPoolUserToGroupAttachment', ...props };
     }
 }
 export namespace AWS.Cognito.UserPoolUserToGroupAttachment {
@@ -10145,7 +10145,7 @@ export namespace AWS.Config {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html
      */
     export function ConfigRule(props: C.Omit<ConfigRule, 'Type'>): ConfigRule {
-        return Object.assign({ Type: 'AWS::Config::ConfigRule' }, props);
+        return { Type: 'AWS::Config::ConfigRule', ...props };
     }
 }
 export namespace AWS.Config.ConfigRule {
@@ -10391,7 +10391,7 @@ export namespace AWS.Config {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html
      */
     export function ConfigurationRecorder(props: C.Omit<ConfigurationRecorder, 'Type'>): ConfigurationRecorder {
-        return Object.assign({ Type: 'AWS::Config::ConfigurationRecorder' }, props);
+        return { Type: 'AWS::Config::ConfigurationRecorder', ...props };
     }
 }
 export namespace AWS.Config.ConfigurationRecorder {
@@ -10505,7 +10505,7 @@ export namespace AWS.Config {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html
      */
     export function DeliveryChannel(props: C.Omit<DeliveryChannel, 'Type'>): DeliveryChannel {
-        return Object.assign({ Type: 'AWS::Config::DeliveryChannel' }, props);
+        return { Type: 'AWS::Config::DeliveryChannel', ...props };
     }
 }
 export namespace AWS.Config.DeliveryChannel {
@@ -10611,7 +10611,7 @@ export namespace AWS.DAX {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html
      */
     export function Cluster(props: C.Omit<Cluster, 'Type'>): Cluster {
-        return Object.assign({ Type: 'AWS::DAX::Cluster' }, props);
+        return { Type: 'AWS::DAX::Cluster', ...props };
     }
 }
 export namespace AWS.DAX.Cluster {
@@ -10776,7 +10776,7 @@ export namespace AWS.DAX {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html
      */
     export function ParameterGroup(props: C.Omit<ParameterGroup, 'Type'>): ParameterGroup {
-        return Object.assign({ Type: 'AWS::DAX::ParameterGroup' }, props);
+        return { Type: 'AWS::DAX::ParameterGroup', ...props };
     }
 }
 export namespace AWS.DAX.ParameterGroup {
@@ -10835,7 +10835,7 @@ export namespace AWS.DAX {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html
      */
     export function SubnetGroup(props: C.Omit<SubnetGroup, 'Type'>): SubnetGroup {
-        return Object.assign({ Type: 'AWS::DAX::SubnetGroup' }, props);
+        return { Type: 'AWS::DAX::SubnetGroup', ...props };
     }
 }
 export namespace AWS.DAX.SubnetGroup {
@@ -10892,7 +10892,7 @@ export namespace AWS.DMS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html
      */
     export function Certificate(props: C.Omit<Certificate, 'Type'>): Certificate {
-        return Object.assign({ Type: 'AWS::DMS::Certificate' }, props);
+        return { Type: 'AWS::DMS::Certificate', ...props };
     }
 }
 export namespace AWS.DMS.Certificate {
@@ -10947,7 +10947,7 @@ export namespace AWS.DMS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html
      */
     export function Endpoint(props: C.Omit<Endpoint, 'Type'>): Endpoint {
-        return Object.assign({ Type: 'AWS::DMS::Endpoint' }, props);
+        return { Type: 'AWS::DMS::Endpoint', ...props };
     }
 }
 export namespace AWS.DMS.Endpoint {
@@ -11379,7 +11379,7 @@ export namespace AWS.DMS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html
      */
     export function EventSubscription(props: C.Omit<EventSubscription, 'Type'>): EventSubscription {
-        return Object.assign({ Type: 'AWS::DMS::EventSubscription' }, props);
+        return { Type: 'AWS::DMS::EventSubscription', ...props };
     }
 }
 export namespace AWS.DMS.EventSubscription {
@@ -11494,7 +11494,7 @@ export namespace AWS.DMS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html
      */
     export function ReplicationInstance(props: C.Omit<ReplicationInstance, 'Type'>): ReplicationInstance {
-        return Object.assign({ Type: 'AWS::DMS::ReplicationInstance' }, props);
+        return { Type: 'AWS::DMS::ReplicationInstance', ...props };
     }
 }
 export namespace AWS.DMS.ReplicationInstance {
@@ -11693,7 +11693,7 @@ export namespace AWS.DMS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html
      */
     export function ReplicationSubnetGroup(props: C.Omit<ReplicationSubnetGroup, 'Type'>): ReplicationSubnetGroup {
-        return Object.assign({ Type: 'AWS::DMS::ReplicationSubnetGroup' }, props);
+        return { Type: 'AWS::DMS::ReplicationSubnetGroup', ...props };
     }
 }
 export namespace AWS.DMS.ReplicationSubnetGroup {
@@ -11754,7 +11754,7 @@ export namespace AWS.DMS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html
      */
     export function ReplicationTask(props: C.Omit<ReplicationTask, 'Type'>): ReplicationTask {
-        return Object.assign({ Type: 'AWS::DMS::ReplicationTask' }, props);
+        return { Type: 'AWS::DMS::ReplicationTask', ...props };
     }
 }
 export namespace AWS.DMS.ReplicationTask {
@@ -11891,7 +11891,7 @@ export namespace AWS.DataPipeline {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html
      */
     export function Pipeline(props: C.Omit<Pipeline, 'Type'>): Pipeline {
-        return Object.assign({ Type: 'AWS::DataPipeline::Pipeline' }, props);
+        return { Type: 'AWS::DataPipeline::Pipeline', ...props };
     }
 }
 export namespace AWS.DataPipeline.Pipeline {
@@ -12191,7 +12191,7 @@ export namespace AWS.DirectoryService {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html
      */
     export function MicrosoftAD(props: C.Omit<MicrosoftAD, 'Type'>): MicrosoftAD {
-        return Object.assign({ Type: 'AWS::DirectoryService::MicrosoftAD' }, props);
+        return { Type: 'AWS::DirectoryService::MicrosoftAD', ...props };
     }
 }
 export namespace AWS.DirectoryService.MicrosoftAD {
@@ -12335,7 +12335,7 @@ export namespace AWS.DirectoryService {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html
      */
     export function SimpleAD(props: C.Omit<SimpleAD, 'Type'>): SimpleAD {
-        return Object.assign({ Type: 'AWS::DirectoryService::SimpleAD' }, props);
+        return { Type: 'AWS::DirectoryService::SimpleAD', ...props };
     }
 }
 export namespace AWS.DirectoryService.SimpleAD {
@@ -12483,7 +12483,7 @@ export namespace AWS.DynamoDB {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html
      */
     export function Table(props: C.Omit<Table, 'Type'>): Table {
-        return Object.assign({ Type: 'AWS::DynamoDB::Table' }, props);
+        return { Type: 'AWS::DynamoDB::Table', ...props };
     }
 }
 export namespace AWS.DynamoDB.Table {
@@ -12851,7 +12851,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html
      */
     export function CustomerGateway(props: C.Omit<CustomerGateway, 'Type'>): CustomerGateway {
-        return Object.assign({ Type: 'AWS::EC2::CustomerGateway' }, props);
+        return { Type: 'AWS::EC2::CustomerGateway', ...props };
     }
 }
 export namespace AWS.EC2.CustomerGateway {
@@ -12917,7 +12917,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html
      */
     export function DHCPOptions(props: C.Omit<DHCPOptions, 'Type'>): DHCPOptions {
-        return Object.assign({ Type: 'AWS::EC2::DHCPOptions' }, props);
+        return { Type: 'AWS::EC2::DHCPOptions', ...props };
     }
 }
 export namespace AWS.EC2.DHCPOptions {
@@ -13006,7 +13006,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html
      */
     export function EIP(props: C.Omit<EIP, 'Type'>): EIP {
-        return Object.assign({ Type: 'AWS::EC2::EIP' }, props);
+        return { Type: 'AWS::EC2::EIP', ...props };
     }
 }
 export namespace AWS.EC2.EIP {
@@ -13065,7 +13065,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html
      */
     export function EIPAssociation(props: C.Omit<EIPAssociation, 'Type'>): EIPAssociation {
-        return Object.assign({ Type: 'AWS::EC2::EIPAssociation' }, props);
+        return { Type: 'AWS::EC2::EIPAssociation', ...props };
     }
 }
 export namespace AWS.EC2.EIPAssociation {
@@ -13164,7 +13164,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html
      */
     export function EgressOnlyInternetGateway(props: C.Omit<EgressOnlyInternetGateway, 'Type'>): EgressOnlyInternetGateway {
-        return Object.assign({ Type: 'AWS::EC2::EgressOnlyInternetGateway' }, props);
+        return { Type: 'AWS::EC2::EgressOnlyInternetGateway', ...props };
     }
 }
 export namespace AWS.EC2.EgressOnlyInternetGateway {
@@ -13211,7 +13211,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html
      */
     export function FlowLog(props: C.Omit<FlowLog, 'Type'>): FlowLog {
-        return Object.assign({ Type: 'AWS::EC2::FlowLog' }, props);
+        return { Type: 'AWS::EC2::FlowLog', ...props };
     }
 }
 export namespace AWS.EC2.FlowLog {
@@ -13302,7 +13302,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html
      */
     export function Host(props: C.Omit<Host, 'Type'>): Host {
-        return Object.assign({ Type: 'AWS::EC2::Host' }, props);
+        return { Type: 'AWS::EC2::Host', ...props };
     }
 }
 export namespace AWS.EC2.Host {
@@ -13365,7 +13365,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html
      */
     export function Instance(props: C.Omit<Instance, 'Type'>): Instance {
-        return Object.assign({ Type: 'AWS::EC2::Instance' }, props);
+        return { Type: 'AWS::EC2::Instance', ...props };
     }
 }
 export namespace AWS.EC2.Instance {
@@ -14149,7 +14149,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html
      */
     export function InternetGateway(props: C.Omit<InternetGateway, 'Type'>): InternetGateway {
-        return Object.assign({ Type: 'AWS::EC2::InternetGateway' }, props);
+        return { Type: 'AWS::EC2::InternetGateway', ...props };
     }
 }
 export namespace AWS.EC2.InternetGateway {
@@ -14199,7 +14199,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html
      */
     export function NatGateway(props: C.Omit<NatGateway, 'Type'>): NatGateway {
-        return Object.assign({ Type: 'AWS::EC2::NatGateway' }, props);
+        return { Type: 'AWS::EC2::NatGateway', ...props };
     }
 }
 export namespace AWS.EC2.NatGateway {
@@ -14245,7 +14245,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl.html
      */
     export function NetworkAcl(props: C.Omit<NetworkAcl, 'Type'>): NetworkAcl {
-        return Object.assign({ Type: 'AWS::EC2::NetworkAcl' }, props);
+        return { Type: 'AWS::EC2::NetworkAcl', ...props };
     }
 }
 export namespace AWS.EC2.NetworkAcl {
@@ -14293,7 +14293,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html
      */
     export function NetworkAclEntry(props: C.Omit<NetworkAclEntry, 'Type'>): NetworkAclEntry {
-        return Object.assign({ Type: 'AWS::EC2::NetworkAclEntry' }, props);
+        return { Type: 'AWS::EC2::NetworkAclEntry', ...props };
     }
 }
 export namespace AWS.EC2.NetworkAclEntry {
@@ -14477,7 +14477,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html
      */
     export function NetworkInterface(props: C.Omit<NetworkInterface, 'Type'>): NetworkInterface {
-        return Object.assign({ Type: 'AWS::EC2::NetworkInterface' }, props);
+        return { Type: 'AWS::EC2::NetworkInterface', ...props };
     }
 }
 export namespace AWS.EC2.NetworkInterface {
@@ -14679,7 +14679,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html
      */
     export function NetworkInterfaceAttachment(props: C.Omit<NetworkInterfaceAttachment, 'Type'>): NetworkInterfaceAttachment {
-        return Object.assign({ Type: 'AWS::EC2::NetworkInterfaceAttachment' }, props);
+        return { Type: 'AWS::EC2::NetworkInterfaceAttachment', ...props };
     }
 }
 export namespace AWS.EC2.NetworkInterfaceAttachment {
@@ -14761,7 +14761,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html
      */
     export function NetworkInterfacePermission(props: C.Omit<NetworkInterfacePermission, 'Type'>): NetworkInterfacePermission {
-        return Object.assign({ Type: 'AWS::EC2::NetworkInterfacePermission' }, props);
+        return { Type: 'AWS::EC2::NetworkInterfacePermission', ...props };
     }
 }
 export namespace AWS.EC2.NetworkInterfacePermission {
@@ -14827,7 +14827,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html
      */
     export function PlacementGroup(props: C.Omit<PlacementGroup, 'Type'>): PlacementGroup {
-        return Object.assign({ Type: 'AWS::EC2::PlacementGroup' }, props);
+        return { Type: 'AWS::EC2::PlacementGroup', ...props };
     }
 }
 export namespace AWS.EC2.PlacementGroup {
@@ -14873,7 +14873,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html
      */
     export function Route(props: C.Omit<Route, 'Type'>): Route {
-        return Object.assign({ Type: 'AWS::EC2::Route' }, props);
+        return { Type: 'AWS::EC2::Route', ...props };
     }
 }
 export namespace AWS.EC2.Route {
@@ -15002,7 +15002,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route-table.html
      */
     export function RouteTable(props: C.Omit<RouteTable, 'Type'>): RouteTable {
-        return Object.assign({ Type: 'AWS::EC2::RouteTable' }, props);
+        return { Type: 'AWS::EC2::RouteTable', ...props };
     }
 }
 export namespace AWS.EC2.RouteTable {
@@ -15046,7 +15046,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html
      */
     export function SecurityGroup(props: C.Omit<SecurityGroup, 'Type'>): SecurityGroup {
-        return Object.assign({ Type: 'AWS::EC2::SecurityGroup' }, props);
+        return { Type: 'AWS::EC2::SecurityGroup', ...props };
     }
 }
 export namespace AWS.EC2.SecurityGroup {
@@ -15302,7 +15302,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html
      */
     export function SecurityGroupEgress(props: C.Omit<SecurityGroupEgress, 'Type'>): SecurityGroupEgress {
-        return Object.assign({ Type: 'AWS::EC2::SecurityGroupEgress' }, props);
+        return { Type: 'AWS::EC2::SecurityGroupEgress', ...props };
     }
 }
 export namespace AWS.EC2.SecurityGroupEgress {
@@ -15420,7 +15420,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html
      */
     export function SecurityGroupIngress(props: C.Omit<SecurityGroupIngress, 'Type'>): SecurityGroupIngress {
-        return Object.assign({ Type: 'AWS::EC2::SecurityGroupIngress' }, props);
+        return { Type: 'AWS::EC2::SecurityGroupIngress', ...props };
     }
 }
 export namespace AWS.EC2.SecurityGroupIngress {
@@ -15575,7 +15575,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html
      */
     export function SpotFleet(props: C.Omit<SpotFleet, 'Type'>): SpotFleet {
-        return Object.assign({ Type: 'AWS::EC2::SpotFleet' }, props);
+        return { Type: 'AWS::EC2::SpotFleet', ...props };
     }
 }
 export namespace AWS.EC2.SpotFleet {
@@ -16320,7 +16320,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html
      */
     export function Subnet(props: C.Omit<Subnet, 'Type'>): Subnet {
-        return Object.assign({ Type: 'AWS::EC2::Subnet' }, props);
+        return { Type: 'AWS::EC2::Subnet', ...props };
     }
 }
 export namespace AWS.EC2.Subnet {
@@ -16427,7 +16427,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html
      */
     export function SubnetCidrBlock(props: C.Omit<SubnetCidrBlock, 'Type'>): SubnetCidrBlock {
-        return Object.assign({ Type: 'AWS::EC2::SubnetCidrBlock' }, props);
+        return { Type: 'AWS::EC2::SubnetCidrBlock', ...props };
     }
 }
 export namespace AWS.EC2.SubnetCidrBlock {
@@ -16472,7 +16472,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html
      */
     export function SubnetNetworkAclAssociation(props: C.Omit<SubnetNetworkAclAssociation, 'Type'>): SubnetNetworkAclAssociation {
-        return Object.assign({ Type: 'AWS::EC2::SubnetNetworkAclAssociation' }, props);
+        return { Type: 'AWS::EC2::SubnetNetworkAclAssociation', ...props };
     }
 }
 export namespace AWS.EC2.SubnetNetworkAclAssociation {
@@ -16517,7 +16517,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html
      */
     export function SubnetRouteTableAssociation(props: C.Omit<SubnetRouteTableAssociation, 'Type'>): SubnetRouteTableAssociation {
-        return Object.assign({ Type: 'AWS::EC2::SubnetRouteTableAssociation' }, props);
+        return { Type: 'AWS::EC2::SubnetRouteTableAssociation', ...props };
     }
 }
 export namespace AWS.EC2.SubnetRouteTableAssociation {
@@ -16566,7 +16566,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trunkinterfaceassociation.html
      */
     export function TrunkInterfaceAssociation(props: C.Omit<TrunkInterfaceAssociation, 'Type'>): TrunkInterfaceAssociation {
-        return Object.assign({ Type: 'AWS::EC2::TrunkInterfaceAssociation' }, props);
+        return { Type: 'AWS::EC2::TrunkInterfaceAssociation', ...props };
     }
 }
 export namespace AWS.EC2.TrunkInterfaceAssociation {
@@ -16629,7 +16629,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html
      */
     export function VPC(props: C.Omit<VPC, 'Type'>): VPC {
-        return Object.assign({ Type: 'AWS::EC2::VPC' }, props);
+        return { Type: 'AWS::EC2::VPC', ...props };
     }
 }
 export namespace AWS.EC2.VPC {
@@ -16719,7 +16719,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html
      */
     export function VPCCidrBlock(props: C.Omit<VPCCidrBlock, 'Type'>): VPCCidrBlock {
-        return Object.assign({ Type: 'AWS::EC2::VPCCidrBlock' }, props);
+        return { Type: 'AWS::EC2::VPCCidrBlock', ...props };
     }
 }
 export namespace AWS.EC2.VPCCidrBlock {
@@ -16781,7 +16781,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-dhcp-options-assoc.html
      */
     export function VPCDHCPOptionsAssociation(props: C.Omit<VPCDHCPOptionsAssociation, 'Type'>): VPCDHCPOptionsAssociation {
-        return Object.assign({ Type: 'AWS::EC2::VPCDHCPOptionsAssociation' }, props);
+        return { Type: 'AWS::EC2::VPCDHCPOptionsAssociation', ...props };
     }
 }
 export namespace AWS.EC2.VPCDHCPOptionsAssociation {
@@ -16832,7 +16832,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html
      */
     export function VPCEndpoint(props: C.Omit<VPCEndpoint, 'Type'>): VPCEndpoint {
-        return Object.assign({ Type: 'AWS::EC2::VPCEndpoint' }, props);
+        return { Type: 'AWS::EC2::VPCEndpoint', ...props };
     }
 }
 export namespace AWS.EC2.VPCEndpoint {
@@ -16905,7 +16905,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html
      */
     export function VPCGatewayAttachment(props: C.Omit<VPCGatewayAttachment, 'Type'>): VPCGatewayAttachment {
-        return Object.assign({ Type: 'AWS::EC2::VPCGatewayAttachment' }, props);
+        return { Type: 'AWS::EC2::VPCGatewayAttachment', ...props };
     }
 }
 export namespace AWS.EC2.VPCGatewayAttachment {
@@ -16970,7 +16970,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html
      */
     export function VPCPeeringConnection(props: C.Omit<VPCPeeringConnection, 'Type'>): VPCPeeringConnection {
-        return Object.assign({ Type: 'AWS::EC2::VPCPeeringConnection' }, props);
+        return { Type: 'AWS::EC2::VPCPeeringConnection', ...props };
     }
 }
 export namespace AWS.EC2.VPCPeeringConnection {
@@ -17054,7 +17054,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html
      */
     export function VPNConnection(props: C.Omit<VPNConnection, 'Type'>): VPNConnection {
-        return Object.assign({ Type: 'AWS::EC2::VPNConnection' }, props);
+        return { Type: 'AWS::EC2::VPNConnection', ...props };
     }
 }
 export namespace AWS.EC2.VPNConnection {
@@ -17141,7 +17141,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection-route.html
      */
     export function VPNConnectionRoute(props: C.Omit<VPNConnectionRoute, 'Type'>): VPNConnectionRoute {
-        return Object.assign({ Type: 'AWS::EC2::VPNConnectionRoute' }, props);
+        return { Type: 'AWS::EC2::VPNConnectionRoute', ...props };
     }
 }
 export namespace AWS.EC2.VPNConnectionRoute {
@@ -17192,7 +17192,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html
      */
     export function VPNGateway(props: C.Omit<VPNGateway, 'Type'>): VPNGateway {
-        return Object.assign({ Type: 'AWS::EC2::VPNGateway' }, props);
+        return { Type: 'AWS::EC2::VPNGateway', ...props };
     }
 }
 export namespace AWS.EC2.VPNGateway {
@@ -17243,7 +17243,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html
      */
     export function VPNGatewayRoutePropagation(props: C.Omit<VPNGatewayRoutePropagation, 'Type'>): VPNGatewayRoutePropagation {
-        return Object.assign({ Type: 'AWS::EC2::VPNGatewayRoutePropagation' }, props);
+        return { Type: 'AWS::EC2::VPNGatewayRoutePropagation', ...props };
     }
 }
 export namespace AWS.EC2.VPNGatewayRoutePropagation {
@@ -17294,7 +17294,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html
      */
     export function Volume(props: C.Omit<Volume, 'Type'>): Volume {
-        return Object.assign({ Type: 'AWS::EC2::Volume' }, props);
+        return { Type: 'AWS::EC2::Volume', ...props };
     }
 }
 export namespace AWS.EC2.Volume {
@@ -17438,7 +17438,7 @@ export namespace AWS.EC2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html
      */
     export function VolumeAttachment(props: C.Omit<VolumeAttachment, 'Type'>): VolumeAttachment {
-        return Object.assign({ Type: 'AWS::EC2::VolumeAttachment' }, props);
+        return { Type: 'AWS::EC2::VolumeAttachment', ...props };
     }
 }
 export namespace AWS.EC2.VolumeAttachment {
@@ -17504,7 +17504,7 @@ export namespace AWS.ECR {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html
      */
     export function Repository(props: C.Omit<Repository, 'Type'>): Repository {
-        return Object.assign({ Type: 'AWS::ECR::Repository' }, props);
+        return { Type: 'AWS::ECR::Repository', ...props };
     }
 }
 export namespace AWS.ECR.Repository {
@@ -17565,7 +17565,7 @@ export namespace AWS.ECS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html
      */
     export function Cluster(props: C.Omit<Cluster, 'Type'>): Cluster {
-        return Object.assign({ Type: 'AWS::ECS::Cluster' }, props);
+        return { Type: 'AWS::ECS::Cluster', ...props };
     }
 }
 export namespace AWS.ECS.Cluster {
@@ -17605,7 +17605,7 @@ export namespace AWS.ECS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html
      */
     export function Service(props: C.Omit<Service, 'Type'>): Service {
-        return Object.assign({ Type: 'AWS::ECS::Service' }, props);
+        return { Type: 'AWS::ECS::Service', ...props };
     }
 }
 export namespace AWS.ECS.Service {
@@ -17877,7 +17877,7 @@ export namespace AWS.ECS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html
      */
     export function TaskDefinition(props: C.Omit<TaskDefinition, 'Type'>): TaskDefinition {
-        return Object.assign({ Type: 'AWS::ECS::TaskDefinition' }, props);
+        return { Type: 'AWS::ECS::TaskDefinition', ...props };
     }
 }
 export namespace AWS.ECS.TaskDefinition {
@@ -18578,7 +18578,7 @@ export namespace AWS.EFS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html
      */
     export function FileSystem(props: C.Omit<FileSystem, 'Type'>): FileSystem {
-        return Object.assign({ Type: 'AWS::EFS::FileSystem' }, props);
+        return { Type: 'AWS::EFS::FileSystem', ...props };
     }
 }
 export namespace AWS.EFS.FileSystem {
@@ -18685,7 +18685,7 @@ export namespace AWS.EFS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html
      */
     export function MountTarget(props: C.Omit<MountTarget, 'Type'>): MountTarget {
-        return Object.assign({ Type: 'AWS::EFS::MountTarget' }, props);
+        return { Type: 'AWS::EFS::MountTarget', ...props };
     }
 }
 export namespace AWS.EFS.MountTarget {
@@ -18766,7 +18766,7 @@ export namespace AWS.EMR {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html
      */
     export function Cluster(props: C.Omit<Cluster, 'Type'>): Cluster {
-        return Object.assign({ Type: 'AWS::EMR::Cluster' }, props);
+        return { Type: 'AWS::EMR::Cluster', ...props };
     }
 }
 export namespace AWS.EMR.Cluster {
@@ -20041,7 +20041,7 @@ export namespace AWS.EMR {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html
      */
     export function InstanceFleetConfig(props: C.Omit<InstanceFleetConfig, 'Type'>): InstanceFleetConfig {
-        return Object.assign({ Type: 'AWS::EMR::InstanceFleetConfig' }, props);
+        return { Type: 'AWS::EMR::InstanceFleetConfig', ...props };
     }
 }
 export namespace AWS.EMR.InstanceFleetConfig {
@@ -20496,7 +20496,7 @@ export namespace AWS.EMR {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html
      */
     export function InstanceGroupConfig(props: C.Omit<InstanceGroupConfig, 'Type'>): InstanceGroupConfig {
-        return Object.assign({ Type: 'AWS::EMR::InstanceGroupConfig' }, props);
+        return { Type: 'AWS::EMR::InstanceGroupConfig', ...props };
     }
 }
 export namespace AWS.EMR.InstanceGroupConfig {
@@ -21141,7 +21141,7 @@ export namespace AWS.EMR {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html
      */
     export function SecurityConfiguration(props: C.Omit<SecurityConfiguration, 'Type'>): SecurityConfiguration {
-        return Object.assign({ Type: 'AWS::EMR::SecurityConfiguration' }, props);
+        return { Type: 'AWS::EMR::SecurityConfiguration', ...props };
     }
 }
 export namespace AWS.EMR.SecurityConfiguration {
@@ -21195,7 +21195,7 @@ export namespace AWS.EMR {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html
      */
     export function Step(props: C.Omit<Step, 'Type'>): Step {
-        return Object.assign({ Type: 'AWS::EMR::Step' }, props);
+        return { Type: 'AWS::EMR::Step', ...props };
     }
 }
 export namespace AWS.EMR.Step {
@@ -21334,7 +21334,7 @@ export namespace AWS.ElastiCache {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html
      */
     export function CacheCluster(props: C.Omit<CacheCluster, 'Type'>): CacheCluster {
-        return Object.assign({ Type: 'AWS::ElastiCache::CacheCluster' }, props);
+        return { Type: 'AWS::ElastiCache::CacheCluster', ...props };
     }
 }
 export namespace AWS.ElastiCache.CacheCluster {
@@ -21620,7 +21620,7 @@ export namespace AWS.ElastiCache {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html
      */
     export function ParameterGroup(props: C.Omit<ParameterGroup, 'Type'>): ParameterGroup {
-        return Object.assign({ Type: 'AWS::ElastiCache::ParameterGroup' }, props);
+        return { Type: 'AWS::ElastiCache::ParameterGroup', ...props };
     }
 }
 export namespace AWS.ElastiCache.ParameterGroup {
@@ -21689,7 +21689,7 @@ export namespace AWS.ElastiCache {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html
      */
     export function ReplicationGroup(props: C.Omit<ReplicationGroup, 'Type'>): ReplicationGroup {
-        return Object.assign({ Type: 'AWS::ElastiCache::ReplicationGroup' }, props);
+        return { Type: 'AWS::ElastiCache::ReplicationGroup', ...props };
     }
 }
 export namespace AWS.ElastiCache.ReplicationGroup {
@@ -22097,7 +22097,7 @@ export namespace AWS.ElastiCache {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group.html
      */
     export function SecurityGroup(props: C.Omit<SecurityGroup, 'Type'>): SecurityGroup {
-        return Object.assign({ Type: 'AWS::ElastiCache::SecurityGroup' }, props);
+        return { Type: 'AWS::ElastiCache::SecurityGroup', ...props };
     }
 }
 export namespace AWS.ElastiCache.SecurityGroup {
@@ -22140,7 +22140,7 @@ export namespace AWS.ElastiCache {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html
      */
     export function SecurityGroupIngress(props: C.Omit<SecurityGroupIngress, 'Type'>): SecurityGroupIngress {
-        return Object.assign({ Type: 'AWS::ElastiCache::SecurityGroupIngress' }, props);
+        return { Type: 'AWS::ElastiCache::SecurityGroupIngress', ...props };
     }
 }
 export namespace AWS.ElastiCache.SecurityGroupIngress {
@@ -22204,7 +22204,7 @@ export namespace AWS.ElastiCache {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html
      */
     export function SubnetGroup(props: C.Omit<SubnetGroup, 'Type'>): SubnetGroup {
-        return Object.assign({ Type: 'AWS::ElastiCache::SubnetGroup' }, props);
+        return { Type: 'AWS::ElastiCache::SubnetGroup', ...props };
     }
 }
 export namespace AWS.ElastiCache.SubnetGroup {
@@ -22260,7 +22260,7 @@ export namespace AWS.ElasticBeanstalk {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html
      */
     export function Application(props: C.Omit<Application, 'Type'>): Application {
-        return Object.assign({ Type: 'AWS::ElasticBeanstalk::Application' }, props);
+        return { Type: 'AWS::ElasticBeanstalk::Application', ...props };
     }
 }
 export namespace AWS.ElasticBeanstalk.Application {
@@ -22311,7 +22311,7 @@ export namespace AWS.ElasticBeanstalk {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html
      */
     export function ApplicationVersion(props: C.Omit<ApplicationVersion, 'Type'>): ApplicationVersion {
-        return Object.assign({ Type: 'AWS::ElasticBeanstalk::ApplicationVersion' }, props);
+        return { Type: 'AWS::ElasticBeanstalk::ApplicationVersion', ...props };
     }
 }
 export namespace AWS.ElasticBeanstalk.ApplicationVersion {
@@ -22399,7 +22399,7 @@ export namespace AWS.ElasticBeanstalk {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html
      */
     export function ConfigurationTemplate(props: C.Omit<ConfigurationTemplate, 'Type'>): ConfigurationTemplate {
-        return Object.assign({ Type: 'AWS::ElasticBeanstalk::ConfigurationTemplate' }, props);
+        return { Type: 'AWS::ElasticBeanstalk::ConfigurationTemplate', ...props };
     }
 }
 export namespace AWS.ElasticBeanstalk.ConfigurationTemplate {
@@ -22573,7 +22573,7 @@ export namespace AWS.ElasticBeanstalk {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html
      */
     export function Environment(props: C.Omit<Environment, 'Type'>): Environment {
-        return Object.assign({ Type: 'AWS::ElasticBeanstalk::Environment' }, props);
+        return { Type: 'AWS::ElasticBeanstalk::Environment', ...props };
     }
 }
 export namespace AWS.ElasticBeanstalk.Environment {
@@ -22794,7 +22794,7 @@ export namespace AWS.ElasticLoadBalancing {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html
      */
     export function LoadBalancer(props: C.Omit<LoadBalancer, 'Type'>): LoadBalancer {
-        return Object.assign({ Type: 'AWS::ElasticLoadBalancing::LoadBalancer' }, props);
+        return { Type: 'AWS::ElasticLoadBalancing::LoadBalancer', ...props };
     }
 }
 export namespace AWS.ElasticLoadBalancing.LoadBalancer {
@@ -23376,7 +23376,7 @@ export namespace AWS.ElasticLoadBalancingV2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html
      */
     export function Listener(props: C.Omit<Listener, 'Type'>): Listener {
-        return Object.assign({ Type: 'AWS::ElasticLoadBalancingV2::Listener' }, props);
+        return { Type: 'AWS::ElasticLoadBalancingV2::Listener', ...props };
     }
 }
 export namespace AWS.ElasticLoadBalancingV2.Listener {
@@ -23505,7 +23505,7 @@ export namespace AWS.ElasticLoadBalancingV2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html
      */
     export function ListenerCertificate(props: C.Omit<ListenerCertificate, 'Type'>): ListenerCertificate {
-        return Object.assign({ Type: 'AWS::ElasticLoadBalancingV2::ListenerCertificate' }, props);
+        return { Type: 'AWS::ElasticLoadBalancingV2::ListenerCertificate', ...props };
     }
 }
 export namespace AWS.ElasticLoadBalancingV2.ListenerCertificate {
@@ -23564,7 +23564,7 @@ export namespace AWS.ElasticLoadBalancingV2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html
      */
     export function ListenerRule(props: C.Omit<ListenerRule, 'Type'>): ListenerRule {
-        return Object.assign({ Type: 'AWS::ElasticLoadBalancingV2::ListenerRule' }, props);
+        return { Type: 'AWS::ElasticLoadBalancingV2::ListenerRule', ...props };
     }
 }
 export namespace AWS.ElasticLoadBalancingV2.ListenerRule {
@@ -23689,7 +23689,7 @@ export namespace AWS.ElasticLoadBalancingV2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html
      */
     export function LoadBalancer(props: C.Omit<LoadBalancer, 'Type'>): LoadBalancer {
-        return Object.assign({ Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer' }, props);
+        return { Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer', ...props };
     }
 }
 export namespace AWS.ElasticLoadBalancingV2.LoadBalancer {
@@ -23876,7 +23876,7 @@ export namespace AWS.ElasticLoadBalancingV2 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html
      */
     export function TargetGroup(props: C.Omit<TargetGroup, 'Type'>): TargetGroup {
-        return Object.assign({ Type: 'AWS::ElasticLoadBalancingV2::TargetGroup' }, props);
+        return { Type: 'AWS::ElasticLoadBalancingV2::TargetGroup', ...props };
     }
 }
 export namespace AWS.ElasticLoadBalancingV2.TargetGroup {
@@ -24134,7 +24134,7 @@ export namespace AWS.Elasticsearch {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html
      */
     export function Domain(props: C.Omit<Domain, 'Type'>): Domain {
-        return Object.assign({ Type: 'AWS::Elasticsearch::Domain' }, props);
+        return { Type: 'AWS::Elasticsearch::Domain', ...props };
     }
 }
 export namespace AWS.Elasticsearch.Domain {
@@ -24422,7 +24422,7 @@ export namespace AWS.Events {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html
      */
     export function Rule(props: C.Omit<Rule, 'Type'>): Rule {
-        return Object.assign({ Type: 'AWS::Events::Rule' }, props);
+        return { Type: 'AWS::Events::Rule', ...props };
     }
 }
 export namespace AWS.Events.Rule {
@@ -24728,7 +24728,7 @@ export namespace AWS.GameLift {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html
      */
     export function Alias(props: C.Omit<Alias, 'Type'>): Alias {
-        return Object.assign({ Type: 'AWS::GameLift::Alias' }, props);
+        return { Type: 'AWS::GameLift::Alias', ...props };
     }
 }
 export namespace AWS.GameLift.Alias {
@@ -24828,7 +24828,7 @@ export namespace AWS.GameLift {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html
      */
     export function Build(props: C.Omit<Build, 'Type'>): Build {
-        return Object.assign({ Type: 'AWS::GameLift::Build' }, props);
+        return { Type: 'AWS::GameLift::Build', ...props };
     }
 }
 export namespace AWS.GameLift.Build {
@@ -24934,7 +24934,7 @@ export namespace AWS.GameLift {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html
      */
     export function Fleet(props: C.Omit<Fleet, 'Type'>): Fleet {
-        return Object.assign({ Type: 'AWS::GameLift::Fleet' }, props);
+        return { Type: 'AWS::GameLift::Fleet', ...props };
     }
 }
 export namespace AWS.GameLift.Fleet {
@@ -25148,7 +25148,7 @@ export namespace AWS.IAM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html
      */
     export function AccessKey(props: C.Omit<AccessKey, 'Type'>): AccessKey {
-        return Object.assign({ Type: 'AWS::IAM::AccessKey' }, props);
+        return { Type: 'AWS::IAM::AccessKey', ...props };
     }
 }
 export namespace AWS.IAM.AccessKey {
@@ -25210,7 +25210,7 @@ export namespace AWS.IAM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html
      */
     export function Group(props: C.Omit<Group, 'Type'>): Group {
-        return Object.assign({ Type: 'AWS::IAM::Group' }, props);
+        return { Type: 'AWS::IAM::Group', ...props };
     }
 }
 export namespace AWS.IAM.Group {
@@ -25306,7 +25306,7 @@ export namespace AWS.IAM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html
      */
     export function InstanceProfile(props: C.Omit<InstanceProfile, 'Type'>): InstanceProfile {
-        return Object.assign({ Type: 'AWS::IAM::InstanceProfile' }, props);
+        return { Type: 'AWS::IAM::InstanceProfile', ...props };
     }
 }
 export namespace AWS.IAM.InstanceProfile {
@@ -25379,7 +25379,7 @@ export namespace AWS.IAM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html
      */
     export function ManagedPolicy(props: C.Omit<ManagedPolicy, 'Type'>): ManagedPolicy {
-        return Object.assign({ Type: 'AWS::IAM::ManagedPolicy' }, props);
+        return { Type: 'AWS::IAM::ManagedPolicy', ...props };
     }
 }
 export namespace AWS.IAM.ManagedPolicy {
@@ -25487,7 +25487,7 @@ export namespace AWS.IAM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html
      */
     export function Policy(props: C.Omit<Policy, 'Type'>): Policy {
-        return Object.assign({ Type: 'AWS::IAM::Policy' }, props);
+        return { Type: 'AWS::IAM::Policy', ...props };
     }
 }
 export namespace AWS.IAM.Policy {
@@ -25571,7 +25571,7 @@ export namespace AWS.IAM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html
      */
     export function Role(props: C.Omit<Role, 'Type'>): Role {
-        return Object.assign({ Type: 'AWS::IAM::Role' }, props);
+        return { Type: 'AWS::IAM::Role', ...props };
     }
 }
 export namespace AWS.IAM.Role {
@@ -25680,7 +25680,7 @@ export namespace AWS.IAM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html
      */
     export function User(props: C.Omit<User, 'Type'>): User {
-        return Object.assign({ Type: 'AWS::IAM::User' }, props);
+        return { Type: 'AWS::IAM::User', ...props };
     }
 }
 export namespace AWS.IAM.User {
@@ -25821,7 +25821,7 @@ export namespace AWS.IAM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html
      */
     export function UserToGroupAddition(props: C.Omit<UserToGroupAddition, 'Type'>): UserToGroupAddition {
-        return Object.assign({ Type: 'AWS::IAM::UserToGroupAddition' }, props);
+        return { Type: 'AWS::IAM::UserToGroupAddition', ...props };
     }
 }
 export namespace AWS.IAM.UserToGroupAddition {
@@ -25867,7 +25867,7 @@ export namespace AWS.IoT {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html
      */
     export function Certificate(props: C.Omit<Certificate, 'Type'>): Certificate {
-        return Object.assign({ Type: 'AWS::IoT::Certificate' }, props);
+        return { Type: 'AWS::IoT::Certificate', ...props };
     }
 }
 export namespace AWS.IoT.Certificate {
@@ -25912,7 +25912,7 @@ export namespace AWS.IoT {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html
      */
     export function Policy(props: C.Omit<Policy, 'Type'>): Policy {
-        return Object.assign({ Type: 'AWS::IoT::Policy' }, props);
+        return { Type: 'AWS::IoT::Policy', ...props };
     }
 }
 export namespace AWS.IoT.Policy {
@@ -25959,7 +25959,7 @@ export namespace AWS.IoT {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policyprincipalattachment.html
      */
     export function PolicyPrincipalAttachment(props: C.Omit<PolicyPrincipalAttachment, 'Type'>): PolicyPrincipalAttachment {
-        return Object.assign({ Type: 'AWS::IoT::PolicyPrincipalAttachment' }, props);
+        return { Type: 'AWS::IoT::PolicyPrincipalAttachment', ...props };
     }
 }
 export namespace AWS.IoT.PolicyPrincipalAttachment {
@@ -26006,7 +26006,7 @@ export namespace AWS.IoT {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html
      */
     export function Thing(props: C.Omit<Thing, 'Type'>): Thing {
-        return Object.assign({ Type: 'AWS::IoT::Thing' }, props);
+        return { Type: 'AWS::IoT::Thing', ...props };
     }
 }
 export namespace AWS.IoT.Thing {
@@ -26068,7 +26068,7 @@ export namespace AWS.IoT {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html
      */
     export function ThingPrincipalAttachment(props: C.Omit<ThingPrincipalAttachment, 'Type'>): ThingPrincipalAttachment {
-        return Object.assign({ Type: 'AWS::IoT::ThingPrincipalAttachment' }, props);
+        return { Type: 'AWS::IoT::ThingPrincipalAttachment', ...props };
     }
 }
 export namespace AWS.IoT.ThingPrincipalAttachment {
@@ -26115,7 +26115,7 @@ export namespace AWS.IoT {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html
      */
     export function TopicRule(props: C.Omit<TopicRule, 'Type'>): TopicRule {
-        return Object.assign({ Type: 'AWS::IoT::TopicRule' }, props);
+        return { Type: 'AWS::IoT::TopicRule', ...props };
     }
 }
 export namespace AWS.IoT.TopicRule {
@@ -26861,7 +26861,7 @@ export namespace AWS.KMS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html
      */
     export function Alias(props: C.Omit<Alias, 'Type'>): Alias {
-        return Object.assign({ Type: 'AWS::KMS::Alias' }, props);
+        return { Type: 'AWS::KMS::Alias', ...props };
     }
 }
 export namespace AWS.KMS.Alias {
@@ -26919,7 +26919,7 @@ export namespace AWS.KMS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html
      */
     export function Key(props: C.Omit<Key, 'Type'>): Key {
-        return Object.assign({ Type: 'AWS::KMS::Key' }, props);
+        return { Type: 'AWS::KMS::Key', ...props };
     }
 }
 export namespace AWS.KMS.Key {
@@ -27008,7 +27008,7 @@ export namespace AWS.Kinesis {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html
      */
     export function Stream(props: C.Omit<Stream, 'Type'>): Stream {
-        return Object.assign({ Type: 'AWS::Kinesis::Stream' }, props);
+        return { Type: 'AWS::Kinesis::Stream', ...props };
     }
 }
 export namespace AWS.Kinesis.Stream {
@@ -27087,7 +27087,7 @@ export namespace AWS.KinesisAnalytics {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html
      */
     export function Application(props: C.Omit<Application, 'Type'>): Application {
-        return Object.assign({ Type: 'AWS::KinesisAnalytics::Application' }, props);
+        return { Type: 'AWS::KinesisAnalytics::Application', ...props };
     }
 }
 export namespace AWS.KinesisAnalytics.Application {
@@ -27513,7 +27513,7 @@ export namespace AWS.KinesisAnalytics {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationoutput.html
      */
     export function ApplicationOutput(props: C.Omit<ApplicationOutput, 'Type'>): ApplicationOutput {
-        return Object.assign({ Type: 'AWS::KinesisAnalytics::ApplicationOutput' }, props);
+        return { Type: 'AWS::KinesisAnalytics::ApplicationOutput', ...props };
     }
 }
 export namespace AWS.KinesisAnalytics.ApplicationOutput {
@@ -27697,7 +27697,7 @@ export namespace AWS.KinesisAnalytics {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationreferencedatasource.html
      */
     export function ApplicationReferenceDataSource(props: C.Omit<ApplicationReferenceDataSource, 'Type'>): ApplicationReferenceDataSource {
-        return Object.assign({ Type: 'AWS::KinesisAnalytics::ApplicationReferenceDataSource' }, props);
+        return { Type: 'AWS::KinesisAnalytics::ApplicationReferenceDataSource', ...props };
     }
 }
 export namespace AWS.KinesisAnalytics.ApplicationReferenceDataSource {
@@ -28006,7 +28006,7 @@ export namespace AWS.KinesisFirehose {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html
      */
     export function DeliveryStream(props: C.Omit<DeliveryStream, 'Type'>): DeliveryStream {
-        return Object.assign({ Type: 'AWS::KinesisFirehose::DeliveryStream' }, props);
+        return { Type: 'AWS::KinesisFirehose::DeliveryStream', ...props };
     }
 }
 export namespace AWS.KinesisFirehose.DeliveryStream {
@@ -28764,7 +28764,7 @@ export namespace AWS.Lambda {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html
      */
     export function Alias(props: C.Omit<Alias, 'Type'>): Alias {
-        return Object.assign({ Type: 'AWS::Lambda::Alias' }, props);
+        return { Type: 'AWS::Lambda::Alias', ...props };
     }
 }
 export namespace AWS.Lambda.Alias {
@@ -28843,7 +28843,7 @@ export namespace AWS.Lambda {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html
      */
     export function EventSourceMapping(props: C.Omit<EventSourceMapping, 'Type'>): EventSourceMapping {
-        return Object.assign({ Type: 'AWS::Lambda::EventSourceMapping' }, props);
+        return { Type: 'AWS::Lambda::EventSourceMapping', ...props };
     }
 }
 export namespace AWS.Lambda.EventSourceMapping {
@@ -28935,7 +28935,7 @@ export namespace AWS.Lambda {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html
      */
     export function Function(props: C.Omit<Function, 'Type'>): Function {
-        return Object.assign({ Type: 'AWS::Lambda::Function' }, props);
+        return { Type: 'AWS::Lambda::Function', ...props };
     }
 }
 export namespace AWS.Lambda.Function {
@@ -29277,7 +29277,7 @@ export namespace AWS.Lambda {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html
      */
     export function Permission(props: C.Omit<Permission, 'Type'>): Permission {
-        return Object.assign({ Type: 'AWS::Lambda::Permission' }, props);
+        return { Type: 'AWS::Lambda::Permission', ...props };
     }
 }
 export namespace AWS.Lambda.Permission {
@@ -29387,7 +29387,7 @@ export namespace AWS.Lambda {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html
      */
     export function Version(props: C.Omit<Version, 'Type'>): Version {
-        return Object.assign({ Type: 'AWS::Lambda::Version' }, props);
+        return { Type: 'AWS::Lambda::Version', ...props };
     }
 }
 export namespace AWS.Lambda.Version {
@@ -29457,7 +29457,7 @@ export namespace AWS.Logs {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html
      */
     export function Destination(props: C.Omit<Destination, 'Type'>): Destination {
-        return Object.assign({ Type: 'AWS::Logs::Destination' }, props);
+        return { Type: 'AWS::Logs::Destination', ...props };
     }
 }
 export namespace AWS.Logs.Destination {
@@ -29536,7 +29536,7 @@ export namespace AWS.Logs {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html
      */
     export function LogGroup(props: C.Omit<LogGroup, 'Type'>): LogGroup {
-        return Object.assign({ Type: 'AWS::Logs::LogGroup' }, props);
+        return { Type: 'AWS::Logs::LogGroup', ...props };
     }
 }
 export namespace AWS.Logs.LogGroup {
@@ -29595,7 +29595,7 @@ export namespace AWS.Logs {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html
      */
     export function LogStream(props: C.Omit<LogStream, 'Type'>): LogStream {
-        return Object.assign({ Type: 'AWS::Logs::LogStream' }, props);
+        return { Type: 'AWS::Logs::LogStream', ...props };
     }
 }
 export namespace AWS.Logs.LogStream {
@@ -29652,7 +29652,7 @@ export namespace AWS.Logs {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html
      */
     export function MetricFilter(props: C.Omit<MetricFilter, 'Type'>): MetricFilter {
-        return Object.assign({ Type: 'AWS::Logs::MetricFilter' }, props);
+        return { Type: 'AWS::Logs::MetricFilter', ...props };
     }
 }
 export namespace AWS.Logs.MetricFilter {
@@ -29768,7 +29768,7 @@ export namespace AWS.Logs {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html
      */
     export function SubscriptionFilter(props: C.Omit<SubscriptionFilter, 'Type'>): SubscriptionFilter {
-        return Object.assign({ Type: 'AWS::Logs::SubscriptionFilter' }, props);
+        return { Type: 'AWS::Logs::SubscriptionFilter', ...props };
     }
 }
 export namespace AWS.Logs.SubscriptionFilter {
@@ -29848,7 +29848,7 @@ export namespace AWS.OpsWorks {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html
      */
     export function App(props: C.Omit<App, 'Type'>): App {
-        return Object.assign({ Type: 'AWS::OpsWorks::App' }, props);
+        return { Type: 'AWS::OpsWorks::App', ...props };
     }
 }
 export namespace AWS.OpsWorks.App {
@@ -30197,7 +30197,7 @@ export namespace AWS.OpsWorks {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html
      */
     export function ElasticLoadBalancerAttachment(props: C.Omit<ElasticLoadBalancerAttachment, 'Type'>): ElasticLoadBalancerAttachment {
-        return Object.assign({ Type: 'AWS::OpsWorks::ElasticLoadBalancerAttachment' }, props);
+        return { Type: 'AWS::OpsWorks::ElasticLoadBalancerAttachment', ...props };
     }
 }
 export namespace AWS.OpsWorks.ElasticLoadBalancerAttachment {
@@ -30248,7 +30248,7 @@ export namespace AWS.OpsWorks {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html
      */
     export function Instance(props: C.Omit<Instance, 'Type'>): Instance {
-        return Object.assign({ Type: 'AWS::OpsWorks::Instance' }, props);
+        return { Type: 'AWS::OpsWorks::Instance', ...props };
     }
 }
 export namespace AWS.OpsWorks.Instance {
@@ -30727,7 +30727,7 @@ export namespace AWS.OpsWorks {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html
      */
     export function Layer(props: C.Omit<Layer, 'Type'>): Layer {
-        return Object.assign({ Type: 'AWS::OpsWorks::Layer' }, props);
+        return { Type: 'AWS::OpsWorks::Layer', ...props };
     }
 }
 export namespace AWS.OpsWorks.Layer {
@@ -31259,7 +31259,7 @@ export namespace AWS.OpsWorks {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html
      */
     export function Stack(props: C.Omit<Stack, 'Type'>): Stack {
-        return Object.assign({ Type: 'AWS::OpsWorks::Stack' }, props);
+        return { Type: 'AWS::OpsWorks::Stack', ...props };
     }
 }
 export namespace AWS.OpsWorks.Stack {
@@ -31766,7 +31766,7 @@ export namespace AWS.OpsWorks {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html
      */
     export function UserProfile(props: C.Omit<UserProfile, 'Type'>): UserProfile {
-        return Object.assign({ Type: 'AWS::OpsWorks::UserProfile' }, props);
+        return { Type: 'AWS::OpsWorks::UserProfile', ...props };
     }
 }
 export namespace AWS.OpsWorks.UserProfile {
@@ -31841,7 +31841,7 @@ export namespace AWS.OpsWorks {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html
      */
     export function Volume(props: C.Omit<Volume, 'Type'>): Volume {
-        return Object.assign({ Type: 'AWS::OpsWorks::Volume' }, props);
+        return { Type: 'AWS::OpsWorks::Volume', ...props };
     }
 }
 export namespace AWS.OpsWorks.Volume {
@@ -31913,7 +31913,7 @@ export namespace AWS.RDS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html
      */
     export function DBCluster(props: C.Omit<DBCluster, 'Type'>): DBCluster {
-        return Object.assign({ Type: 'AWS::RDS::DBCluster' }, props);
+        return { Type: 'AWS::RDS::DBCluster', ...props };
     }
 }
 export namespace AWS.RDS.DBCluster {
@@ -32158,7 +32158,7 @@ export namespace AWS.RDS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html
      */
     export function DBClusterParameterGroup(props: C.Omit<DBClusterParameterGroup, 'Type'>): DBClusterParameterGroup {
-        return Object.assign({ Type: 'AWS::RDS::DBClusterParameterGroup' }, props);
+        return { Type: 'AWS::RDS::DBClusterParameterGroup', ...props };
     }
 }
 export namespace AWS.RDS.DBClusterParameterGroup {
@@ -32227,7 +32227,7 @@ export namespace AWS.RDS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html
      */
     export function DBInstance(props: C.Omit<DBInstance, 'Type'>): DBInstance {
-        return Object.assign({ Type: 'AWS::RDS::DBInstance' }, props);
+        return { Type: 'AWS::RDS::DBInstance', ...props };
     }
 }
 export namespace AWS.RDS.DBInstance {
@@ -32744,7 +32744,7 @@ export namespace AWS.RDS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html
      */
     export function DBParameterGroup(props: C.Omit<DBParameterGroup, 'Type'>): DBParameterGroup {
-        return Object.assign({ Type: 'AWS::RDS::DBParameterGroup' }, props);
+        return { Type: 'AWS::RDS::DBParameterGroup', ...props };
     }
 }
 export namespace AWS.RDS.DBParameterGroup {
@@ -32814,7 +32814,7 @@ export namespace AWS.RDS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html
      */
     export function DBSecurityGroup(props: C.Omit<DBSecurityGroup, 'Type'>): DBSecurityGroup {
-        return Object.assign({ Type: 'AWS::RDS::DBSecurityGroup' }, props);
+        return { Type: 'AWS::RDS::DBSecurityGroup', ...props };
     }
 }
 export namespace AWS.RDS.DBSecurityGroup {
@@ -32940,7 +32940,7 @@ export namespace AWS.RDS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html
      */
     export function DBSecurityGroupIngress(props: C.Omit<DBSecurityGroupIngress, 'Type'>): DBSecurityGroupIngress {
-        return Object.assign({ Type: 'AWS::RDS::DBSecurityGroupIngress' }, props);
+        return { Type: 'AWS::RDS::DBSecurityGroupIngress', ...props };
     }
 }
 export namespace AWS.RDS.DBSecurityGroupIngress {
@@ -33023,7 +33023,7 @@ export namespace AWS.RDS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html
      */
     export function DBSubnetGroup(props: C.Omit<DBSubnetGroup, 'Type'>): DBSubnetGroup {
-        return Object.assign({ Type: 'AWS::RDS::DBSubnetGroup' }, props);
+        return { Type: 'AWS::RDS::DBSubnetGroup', ...props };
     }
 }
 export namespace AWS.RDS.DBSubnetGroup {
@@ -33085,7 +33085,7 @@ export namespace AWS.RDS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html
      */
     export function EventSubscription(props: C.Omit<EventSubscription, 'Type'>): EventSubscription {
-        return Object.assign({ Type: 'AWS::RDS::EventSubscription' }, props);
+        return { Type: 'AWS::RDS::EventSubscription', ...props };
     }
 }
 export namespace AWS.RDS.EventSubscription {
@@ -33178,7 +33178,7 @@ export namespace AWS.RDS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html
      */
     export function OptionGroup(props: C.Omit<OptionGroup, 'Type'>): OptionGroup {
-        return Object.assign({ Type: 'AWS::RDS::OptionGroup' }, props);
+        return { Type: 'AWS::RDS::OptionGroup', ...props };
     }
 }
 export namespace AWS.RDS.OptionGroup {
@@ -33361,7 +33361,7 @@ export namespace AWS.Redshift {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html
      */
     export function Cluster(props: C.Omit<Cluster, 'Type'>): Cluster {
-        return Object.assign({ Type: 'AWS::Redshift::Cluster' }, props);
+        return { Type: 'AWS::Redshift::Cluster', ...props };
     }
 }
 export namespace AWS.Redshift.Cluster {
@@ -33760,7 +33760,7 @@ export namespace AWS.Redshift {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html
      */
     export function ClusterParameterGroup(props: C.Omit<ClusterParameterGroup, 'Type'>): ClusterParameterGroup {
-        return Object.assign({ Type: 'AWS::Redshift::ClusterParameterGroup' }, props);
+        return { Type: 'AWS::Redshift::ClusterParameterGroup', ...props };
     }
 }
 export namespace AWS.Redshift.ClusterParameterGroup {
@@ -33861,7 +33861,7 @@ export namespace AWS.Redshift {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html
      */
     export function ClusterSecurityGroup(props: C.Omit<ClusterSecurityGroup, 'Type'>): ClusterSecurityGroup {
-        return Object.assign({ Type: 'AWS::Redshift::ClusterSecurityGroup' }, props);
+        return { Type: 'AWS::Redshift::ClusterSecurityGroup', ...props };
     }
 }
 export namespace AWS.Redshift.ClusterSecurityGroup {
@@ -33905,7 +33905,7 @@ export namespace AWS.Redshift {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html
      */
     export function ClusterSecurityGroupIngress(props: C.Omit<ClusterSecurityGroupIngress, 'Type'>): ClusterSecurityGroupIngress {
-        return Object.assign({ Type: 'AWS::Redshift::ClusterSecurityGroupIngress' }, props);
+        return { Type: 'AWS::Redshift::ClusterSecurityGroupIngress', ...props };
     }
 }
 export namespace AWS.Redshift.ClusterSecurityGroupIngress {
@@ -33978,7 +33978,7 @@ export namespace AWS.Redshift {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersubnetgroup.html
      */
     export function ClusterSubnetGroup(props: C.Omit<ClusterSubnetGroup, 'Type'>): ClusterSubnetGroup {
-        return Object.assign({ Type: 'AWS::Redshift::ClusterSubnetGroup' }, props);
+        return { Type: 'AWS::Redshift::ClusterSubnetGroup', ...props };
     }
 }
 export namespace AWS.Redshift.ClusterSubnetGroup {
@@ -34040,7 +34040,7 @@ export namespace AWS.Route53 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html
      */
     export function HealthCheck(props: C.Omit<HealthCheck, 'Type'>): HealthCheck {
-        return Object.assign({ Type: 'AWS::Route53::HealthCheck' }, props);
+        return { Type: 'AWS::Route53::HealthCheck', ...props };
     }
 }
 export namespace AWS.Route53.HealthCheck {
@@ -34348,7 +34348,7 @@ export namespace AWS.Route53 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html
      */
     export function HostedZone(props: C.Omit<HostedZone, 'Type'>): HostedZone {
-        return Object.assign({ Type: 'AWS::Route53::HostedZone' }, props);
+        return { Type: 'AWS::Route53::HostedZone', ...props };
     }
 }
 export namespace AWS.Route53.HostedZone {
@@ -34486,7 +34486,7 @@ export namespace AWS.Route53 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html
      */
     export function RecordSet(props: C.Omit<RecordSet, 'Type'>): RecordSet {
-        return Object.assign({ Type: 'AWS::Route53::RecordSet' }, props);
+        return { Type: 'AWS::Route53::RecordSet', ...props };
     }
 }
 export namespace AWS.Route53.RecordSet {
@@ -34791,7 +34791,7 @@ export namespace AWS.Route53 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html
      */
     export function RecordSetGroup(props: C.Omit<RecordSetGroup, 'Type'>): RecordSetGroup {
-        return Object.assign({ Type: 'AWS::Route53::RecordSetGroup' }, props);
+        return { Type: 'AWS::Route53::RecordSetGroup', ...props };
     }
 }
 export namespace AWS.Route53.RecordSetGroup {
@@ -35138,7 +35138,7 @@ export namespace AWS.S3 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html
      */
     export function Bucket(props: C.Omit<Bucket, 'Type'>): Bucket {
-        return Object.assign({ Type: 'AWS::S3::Bucket' }, props);
+        return { Type: 'AWS::S3::Bucket', ...props };
     }
 }
 export namespace AWS.S3.Bucket {
@@ -36308,7 +36308,7 @@ export namespace AWS.S3 {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html
      */
     export function BucketPolicy(props: C.Omit<BucketPolicy, 'Type'>): BucketPolicy {
-        return Object.assign({ Type: 'AWS::S3::BucketPolicy' }, props);
+        return { Type: 'AWS::S3::BucketPolicy', ...props };
     }
 }
 export namespace AWS.S3.BucketPolicy {
@@ -36360,7 +36360,7 @@ export namespace AWS.SDB {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-simpledb.html
      */
     export function Domain(props: C.Omit<Domain, 'Type'>): Domain {
-        return Object.assign({ Type: 'AWS::SDB::Domain' }, props);
+        return { Type: 'AWS::SDB::Domain', ...props };
     }
 }
 export namespace AWS.SDB.Domain {
@@ -36401,7 +36401,7 @@ export namespace AWS.SNS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html
      */
     export function Subscription(props: C.Omit<Subscription, 'Type'>): Subscription {
-        return Object.assign({ Type: 'AWS::SNS::Subscription' }, props);
+        return { Type: 'AWS::SNS::Subscription', ...props };
     }
 }
 export namespace AWS.SNS.Subscription {
@@ -36462,7 +36462,7 @@ export namespace AWS.SNS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html
      */
     export function Topic(props: C.Omit<Topic, 'Type'>): Topic {
-        return Object.assign({ Type: 'AWS::SNS::Topic' }, props);
+        return { Type: 'AWS::SNS::Topic', ...props };
     }
 }
 export namespace AWS.SNS.Topic {
@@ -36552,7 +36552,7 @@ export namespace AWS.SNS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html
      */
     export function TopicPolicy(props: C.Omit<TopicPolicy, 'Type'>): TopicPolicy {
-        return Object.assign({ Type: 'AWS::SNS::TopicPolicy' }, props);
+        return { Type: 'AWS::SNS::TopicPolicy', ...props };
     }
 }
 export namespace AWS.SNS.TopicPolicy {
@@ -36602,7 +36602,7 @@ export namespace AWS.SQS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html
      */
     export function Queue(props: C.Omit<Queue, 'Type'>): Queue {
-        return Object.assign({ Type: 'AWS::SQS::Queue' }, props);
+        return { Type: 'AWS::SQS::Queue', ...props };
     }
 }
 export namespace AWS.SQS.Queue {
@@ -36778,7 +36778,7 @@ export namespace AWS.SQS {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html
      */
     export function QueuePolicy(props: C.Omit<QueuePolicy, 'Type'>): QueuePolicy {
-        return Object.assign({ Type: 'AWS::SQS::QueuePolicy' }, props);
+        return { Type: 'AWS::SQS::QueuePolicy', ...props };
     }
 }
 export namespace AWS.SQS.QueuePolicy {
@@ -36831,7 +36831,7 @@ export namespace AWS.SSM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html
      */
     export function Association(props: C.Omit<Association, 'Type'>): Association {
-        return Object.assign({ Type: 'AWS::SSM::Association' }, props);
+        return { Type: 'AWS::SSM::Association', ...props };
     }
 }
 export namespace AWS.SSM.Association {
@@ -36966,7 +36966,7 @@ export namespace AWS.SSM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html
      */
     export function Document(props: C.Omit<Document, 'Type'>): Document {
-        return Object.assign({ Type: 'AWS::SSM::Document' }, props);
+        return { Type: 'AWS::SSM::Document', ...props };
     }
 }
 export namespace AWS.SSM.Document {
@@ -37022,7 +37022,7 @@ export namespace AWS.SSM {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html
      */
     export function Parameter(props: C.Omit<Parameter, 'Type'>): Parameter {
-        return Object.assign({ Type: 'AWS::SSM::Parameter' }, props);
+        return { Type: 'AWS::SSM::Parameter', ...props };
     }
 }
 export namespace AWS.SSM.Parameter {
@@ -37101,7 +37101,7 @@ export namespace AWS.StepFunctions {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html
      */
     export function Activity(props: C.Omit<Activity, 'Type'>): Activity {
-        return Object.assign({ Type: 'AWS::StepFunctions::Activity' }, props);
+        return { Type: 'AWS::StepFunctions::Activity', ...props };
     }
 }
 export namespace AWS.StepFunctions.Activity {
@@ -37140,7 +37140,7 @@ export namespace AWS.StepFunctions {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html
      */
     export function StateMachine(props: C.Omit<StateMachine, 'Type'>): StateMachine {
-        return Object.assign({ Type: 'AWS::StepFunctions::StateMachine' }, props);
+        return { Type: 'AWS::StepFunctions::StateMachine', ...props };
     }
 }
 export namespace AWS.StepFunctions.StateMachine {
@@ -37193,7 +37193,7 @@ export namespace AWS.WAF {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-bytematchset.html
      */
     export function ByteMatchSet(props: C.Omit<ByteMatchSet, 'Type'>): ByteMatchSet {
-        return Object.assign({ Type: 'AWS::WAF::ByteMatchSet' }, props);
+        return { Type: 'AWS::WAF::ByteMatchSet', ...props };
     }
 }
 export namespace AWS.WAF.ByteMatchSet {
@@ -37349,7 +37349,7 @@ export namespace AWS.WAF {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-ipset.html
      */
     export function IPSet(props: C.Omit<IPSet, 'Type'>): IPSet {
-        return Object.assign({ Type: 'AWS::WAF::IPSet' }, props);
+        return { Type: 'AWS::WAF::IPSet', ...props };
     }
 }
 export namespace AWS.WAF.IPSet {
@@ -37437,7 +37437,7 @@ export namespace AWS.WAF {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-rule.html
      */
     export function Rule(props: C.Omit<Rule, 'Type'>): Rule {
-        return Object.assign({ Type: 'AWS::WAF::Rule' }, props);
+        return { Type: 'AWS::WAF::Rule', ...props };
     }
 }
 export namespace AWS.WAF.Rule {
@@ -37538,7 +37538,7 @@ export namespace AWS.WAF {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html
      */
     export function SizeConstraintSet(props: C.Omit<SizeConstraintSet, 'Type'>): SizeConstraintSet {
-        return Object.assign({ Type: 'AWS::WAF::SizeConstraintSet' }, props);
+        return { Type: 'AWS::WAF::SizeConstraintSet', ...props };
     }
 }
 export namespace AWS.WAF.SizeConstraintSet {
@@ -37673,7 +37673,7 @@ export namespace AWS.WAF {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sqlinjectionmatchset.html
      */
     export function SqlInjectionMatchSet(props: C.Omit<SqlInjectionMatchSet, 'Type'>): SqlInjectionMatchSet {
-        return Object.assign({ Type: 'AWS::WAF::SqlInjectionMatchSet' }, props);
+        return { Type: 'AWS::WAF::SqlInjectionMatchSet', ...props };
     }
 }
 export namespace AWS.WAF.SqlInjectionMatchSet {
@@ -37792,7 +37792,7 @@ export namespace AWS.WAF {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html
      */
     export function WebACL(props: C.Omit<WebACL, 'Type'>): WebACL {
-        return Object.assign({ Type: 'AWS::WAF::WebACL' }, props);
+        return { Type: 'AWS::WAF::WebACL', ...props };
     }
 }
 export namespace AWS.WAF.WebACL {
@@ -37921,7 +37921,7 @@ export namespace AWS.WAF {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-xssmatchset.html
      */
     export function XssMatchSet(props: C.Omit<XssMatchSet, 'Type'>): XssMatchSet {
-        return Object.assign({ Type: 'AWS::WAF::XssMatchSet' }, props);
+        return { Type: 'AWS::WAF::XssMatchSet', ...props };
     }
 }
 export namespace AWS.WAF.XssMatchSet {
@@ -38025,7 +38025,7 @@ export namespace AWS.WAFRegional {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-bytematchset.html
      */
     export function ByteMatchSet(props: C.Omit<ByteMatchSet, 'Type'>): ByteMatchSet {
-        return Object.assign({ Type: 'AWS::WAFRegional::ByteMatchSet' }, props);
+        return { Type: 'AWS::WAFRegional::ByteMatchSet', ...props };
     }
 }
 export namespace AWS.WAFRegional.ByteMatchSet {
@@ -38152,7 +38152,7 @@ export namespace AWS.WAFRegional {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html
      */
     export function IPSet(props: C.Omit<IPSet, 'Type'>): IPSet {
-        return Object.assign({ Type: 'AWS::WAFRegional::IPSet' }, props);
+        return { Type: 'AWS::WAFRegional::IPSet', ...props };
     }
 }
 export namespace AWS.WAFRegional.IPSet {
@@ -38230,7 +38230,7 @@ export namespace AWS.WAFRegional {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html
      */
     export function Rule(props: C.Omit<Rule, 'Type'>): Rule {
-        return Object.assign({ Type: 'AWS::WAFRegional::Rule' }, props);
+        return { Type: 'AWS::WAFRegional::Rule', ...props };
     }
 }
 export namespace AWS.WAFRegional.Rule {
@@ -38322,7 +38322,7 @@ export namespace AWS.WAFRegional {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html
      */
     export function SizeConstraintSet(props: C.Omit<SizeConstraintSet, 'Type'>): SizeConstraintSet {
-        return Object.assign({ Type: 'AWS::WAFRegional::SizeConstraintSet' }, props);
+        return { Type: 'AWS::WAFRegional::SizeConstraintSet', ...props };
     }
 }
 export namespace AWS.WAFRegional.SizeConstraintSet {
@@ -38452,7 +38452,7 @@ export namespace AWS.WAFRegional {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html
      */
     export function SqlInjectionMatchSet(props: C.Omit<SqlInjectionMatchSet, 'Type'>): SqlInjectionMatchSet {
-        return Object.assign({ Type: 'AWS::WAFRegional::SqlInjectionMatchSet' }, props);
+        return { Type: 'AWS::WAFRegional::SqlInjectionMatchSet', ...props };
     }
 }
 export namespace AWS.WAFRegional.SqlInjectionMatchSet {
@@ -38552,7 +38552,7 @@ export namespace AWS.WAFRegional {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html
      */
     export function WebACL(props: C.Omit<WebACL, 'Type'>): WebACL {
-        return Object.assign({ Type: 'AWS::WAFRegional::WebACL' }, props);
+        return { Type: 'AWS::WAFRegional::WebACL', ...props };
     }
 }
 export namespace AWS.WAFRegional.WebACL {
@@ -38670,7 +38670,7 @@ export namespace AWS.WAFRegional {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webaclassociation.html
      */
     export function WebACLAssociation(props: C.Omit<WebACLAssociation, 'Type'>): WebACLAssociation {
-        return Object.assign({ Type: 'AWS::WAFRegional::WebACLAssociation' }, props);
+        return { Type: 'AWS::WAFRegional::WebACLAssociation', ...props };
     }
 }
 export namespace AWS.WAFRegional.WebACLAssociation {
@@ -38719,7 +38719,7 @@ export namespace AWS.WAFRegional {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html
      */
     export function XssMatchSet(props: C.Omit<XssMatchSet, 'Type'>): XssMatchSet {
-        return Object.assign({ Type: 'AWS::WAFRegional::XssMatchSet' }, props);
+        return { Type: 'AWS::WAFRegional::XssMatchSet', ...props };
     }
 }
 export namespace AWS.WAFRegional.XssMatchSet {
@@ -38822,7 +38822,7 @@ export namespace AWS.WorkSpaces {
      * Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html
      */
     export function Workspace(props: C.Omit<Workspace, 'Type'>): Workspace {
-        return Object.assign({ Type: 'AWS::WorkSpaces::Workspace' }, props);
+        return { Type: 'AWS::WorkSpaces::Workspace', ...props };
     }
 }
 export namespace AWS.WorkSpaces.Workspace {

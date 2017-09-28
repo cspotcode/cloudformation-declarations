@@ -9,7 +9,7 @@ import { JSDOM } from 'jsdom';
 import { SpecFile, SpecType, SpecProperty } from './spec-file';
 
 const paths = {
-    generatedDeclaration: 'declarations/generated/aws-cloudformation.ts',
+    generatedDeclaration: 'src/declarations/generated/aws-cloudformation.ts',
     docsCache: 'cache/html-docs.json',
     specificationsDirectory: 'specifications'
 };
@@ -132,7 +132,7 @@ async function main() {
                          * Documentation: ${ v.Documentation }
                          */
                         export function ${ identifier }(props: C.Omit<${ identifier }, 'Type'>): ${ identifier } {
-                            return Object.assign({Type: '${ k }'}, props);
+                            return {Type: '${ k }', ...props};
                         }
                     `) }
                     ${ declarationInNamespace(isResource ? `${ identifierPath }.Properties` : identifierPath, t `

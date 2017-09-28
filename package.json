@@ -3,8 +3,10 @@
   "version": "0.0.3",
   "description": "TypeScript declarations and helpers for writing CloudFormation templates in TS or JS.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "ts-node -F ./src/index.ts ; cd declarations ; typedoc --out ../docs ."
+    "test": "powershell -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1",
+    "build": "powershell -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1",
+    "compile": "powershell -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1",
+    "generate": "powershell -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1"
   },
   "keywords": [
     "AWS",
@@ -34,13 +36,15 @@
     "request": "^2.82.0",
     "request-promise": "^4.2.2",
     "ts-node": "^3.3.0",
+    "tslib": "^1.7.1",
     "typedoc": "^0.8.0",
     "typescript": "^2.5.2"
   },
   "files": [
-    "declarations",
     "docs",
-    "index.ts",
+    "index.d.ts",
+    "index.js",
+    "out",
     "specifications",
     "src",
     "README.md",
