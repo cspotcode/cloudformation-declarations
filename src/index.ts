@@ -77,7 +77,6 @@ async function main() {
 
     /** Generated type declaration .ts */
     const declaration = t `
-    export * from '../common';
     import * as C from '../common';
     ${
         map(specs, (spec, path) => {

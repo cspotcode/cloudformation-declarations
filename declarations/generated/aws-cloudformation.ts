@@ -1,4 +1,3 @@
-export * from '../common';
 import * as C from '../common';
 export namespace AWS.ApiGateway {
     /**
