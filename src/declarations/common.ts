@@ -103,7 +103,7 @@ export interface ConditionRef {
 // export type YieldsBrand<V> = V | ReturnsBrand<V>;
 
 export type Yields<V> = V | Returns<V>;
-export type Returns<V> = Functions.Select<V> | Functions.If<V> | Ref;
+export type Returns<V> = Functions.Select<V> | Functions.If<V> | Functions.ImportValue<V> | Ref;
 export type YieldsBoolean = Yields<CFBoolean> | ReturnsBoolean;
 export type ReturnsBoolean = Returns<CFBoolean> | Functions.And | Functions.Equals | Functions.Not | Functions.Or | ConditionRef;
 export type YieldsString = Yields<CFString> | ReturnsString;
