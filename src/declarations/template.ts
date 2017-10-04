@@ -1,6 +1,6 @@
 // Very WIP typings for a CloudFormation stack template
 
-import { TODO, BooleanCondition, CFString, CFInteger, CFBoolean } from './common';
+import { TODO, BooleanCondition, CFString, CFInteger, CFBoolean, Yields } from './common';
 import { Resource } from './generated/aws-cloudformation';
 
 export interface Template {
@@ -52,7 +52,7 @@ export interface Output {
      * The value of the property returned by the `aws cloudformation describe-stacks` command.
      * The value of an output can include literals, parameter references, pseudo-parameters, a mapping value, or intrinsic functions.
      */
-    Value: string;
+    Value: Yields<CFString>;
     Export?: {
         /** 
          * The name of the resource output to be exported for a cross-stack reference.
