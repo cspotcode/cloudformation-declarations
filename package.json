@@ -17,6 +17,14 @@
   ],
   "author": "Andrew Bradley <cspotcode@gmail.com>",
   "license": "MIT",
+  "homepage": "https://github.com/cspotcode/cloudformation-declarations",
+  "bugs": {
+    "url": "https://github.com/cspotcode/cloudformation-declarations/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cspotcode/cloudformation-declarations.git"
+  },
   "dependencies": {
     "@types/bluebird": "^3.5.12",
     "@types/glob": "^5.0.32",
