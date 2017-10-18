@@ -6,9 +6,13 @@ export type Omit<T, K extends keyof T> = Pick<T, Diff<keyof T, K>>;
 
 export type CFString = string;
 export type CFBoolean = 'true' | 'false';
+export function CFInteger(n: number) {return `${ n }`}
 export type CFInteger = string;
+export function CFDouble(n: number) {return `${ n }`}
 export type CFDouble = string;
+export function CFLong(n: number) {return `${ n }`}
 export type CFLong = string;
+export function CFTimestamp(d: string) {return d}
 export type CFTimestamp = string; // TODO
 export type CFJson = object; // TODO
 export type CFList<T> = Array<T>;
