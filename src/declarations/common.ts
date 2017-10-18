@@ -20,78 +20,104 @@ export type CFMap<T> = {[key: string]: T};
 
 export type LiteralOrRef<V = any> = V | Ref;
 
-function factory<FnType, Key extends keyof FnType>(key: Key) {
-    return function(v: FnType[Key]): FnType {
-        return { [key]: v } as any as FnType;
-    };
-}
-
 export namespace Functions {
-    export const Base64 = factory<Base64, 'Fn::Base64'>('Fn::Base64');
     export interface Base64 {
         'Fn::Base64': Yields<CFString>;
     }
-    export function FindInMap<V>(v: FindInMap<V>['Fn::FindInMap']): FindInMap<V> {
-        return {'Fn::FindInMap': v};
+    export function Base64(v: Base64['Fn::Base64']): Base64 & YieldsBrand<CFString> {
+        return {'Fn::Base64': v} as any;
     }
-    export interface FindInMap<V> {
+
+    export interface FindInMap {
         'Fn::FindInMap': [Yields<CFString>, Yields<CFString>, Yields<CFString>];
     }
-    export const GetAtt = factory<GetAtt, 'Fn::GetAtt'>('Fn::GetAtt');
+    export function FindInMap<V>(v: FindInMap['Fn::FindInMap']): FindInMap & YieldsBrand<V> {
+        return {'Fn::FindInMap': v} as any;
+    }
+
     export interface GetAtt {
         'Fn::GetAtt': [CFString, LiteralOrRef<CFString>];
     }
-    export const GetAZs = factory<GetAZs, 'Fn::GetAZs'>('Fn::GetAZs');
+    export function GetAtt<V>(v: GetAtt['Fn::GetAtt']): GetAtt & YieldsBrand<V> {
+        return {'Fn::GetAtt': v} as any;
+    }
+
     export interface GetAZs {
         'Fn::GetAZs': LiteralOrRef<CFString>;
     }
-    export function ImportValue<V>(v: ImportValue<V>['Fn::ImportValue']): ImportValue<V> {
-        return {'Fn::ImportValue': v};
+    export function GetAZs(v: GetAZs['Fn::GetAZs']): GetAZs & YieldsBrand<CFList<CFString>> {
+        return {'Fn::GetAZs': v} as any;
     }
-    export interface ImportValue<V> {
+
+    export interface ImportValue {
         'Fn::ImportValue': Yields<CFString>;
     }
-    export const Join = factory<Join, 'Fn::Join'>('Fn::Join');
+    export function ImportValue<V>(v: ImportValue['Fn::ImportValue']): ImportValue & YieldsBrand<V> {
+        return {'Fn::ImportValue': v} as any;
+    }
+
     export interface Join {
         'Fn::Join': [CFString, Yields<Array<Yields<CFString>>>];
     }
-    export function Select<V>(v: Select<V>['Fn::Select']): Select<V> {
-        return {'Fn::Select': v};
+    export function Join(v: Join['Fn::Join']): Join & YieldsBrand<CFString> {
+        return {'Fn::Join': v} as any;
     }
+
     export interface Select<V> {
-        'Fn::Select': [Yields<CFInteger>, Yields<Array<Yields<V>>>];
+        'Fn::Select': [Yields<CFInteger>, Yields<CFList<Yields<V>>>];
     }
-    export const Split = factory<Split, 'Fn::Split'>('Fn::Split');
+    export function Select<V>(v: Select<V>['Fn::Select']): Select<V> & YieldsBrand<V> {
+        return {'Fn::Select': v} as any;
+    }
+
     export interface Split {
         'Fn::Split': [CFString, Yields<CFString>];
     }
-    export const Sub = factory<Sub, 'Fn::Sub'>('Fn::Sub');
+    export function Split(v: Split['Fn::Split']): Split & YieldsBrand<CFList<CFString>> {
+        return {'Fn::Split': v} as any;
+    }
+
     export interface Sub {
         'Fn::Sub': [Yields<CFString>, Yields<CFMap<Yields<CFString>>>] | Yields<CFString>;
-    };
-
-    export const And = factory<And, 'Fn::And'>('Fn::And');
-    export interface And {
-        'Fn::And': Array<BooleanCondition>;
     }
-    export const Equals = factory<Equals, 'Fn::Equals'>('Fn::Equals');
+    export function Sub(v: Sub['Fn::Sub']): Sub & YieldsBrand<CFString> {
+        return {'Fn::Sub': v} as any;
+    }
+
+    export interface And {
+        'Fn::And': CFList<BooleanCondition>;
+    }
+    export function And(v: And['Fn::And']): And & YieldsBrand<CFBoolean> {
+        return {'Fn::And': v} as any;
+    }
+
     export interface Equals {
         'Fn::Equals': [Yields<any>, Yields<any>]
     }
-    export function If<V>(v: If<V>['Fn::If']): If<V> {
-        return {'Fn::If': v};
+    export function Equals(v: Equals['Fn::Equals']): Equals & YieldsBrand<CFBoolean> {
+        return {'Fn::Equals': v} as any;
     }
+
     export interface If<V> {
         'Fn::If': [ConditionId, Yields<V>, Yields<V>];
     }
-    export const Not = factory<Not, 'Fn::Not'>('Fn::Not');
+    export function If<V>(v: If<V>['Fn::If']): If<V> & YieldsBrand<V> {
+        return {'Fn::If': v} as any;
+    }
+
     export interface Not {
         'Fn::Not': [BooleanCondition]
     }
-    export const Or = factory<Or, 'Fn::Or'>('Fn::Or');
+    export function Not(v: Not['Fn::Not']): Not & YieldsBrand<CFBoolean> {
+        return {'Fn::Not': v} as any;
+    }
+
     export interface Or {
         'Fn::Or': Array<BooleanCondition>;
-    };
+    }
+    export function Or(v: Or['Fn::Or']): Or & YieldsBrand<CFBoolean> {
+        return {'Fn::Or': v} as any;
+    }
 }
 
 export type BooleanCondition = Functions.And | Functions.Equals | Functions.Not | Functions.Or | ConditionRef;
@@ -106,12 +132,12 @@ export interface ConditionRef {
  */
 // export type YieldsBrand<V> = V | ReturnsBrand<V>;
 
-export type Yields<V> = V | Returns<V>;
-export type Returns<V> = Functions.Select<V> | Functions.If<V> | Functions.ImportValue<V> | Ref;
-export type YieldsBoolean = Yields<CFBoolean> | ReturnsBoolean;
-export type ReturnsBoolean = Returns<CFBoolean> | Functions.And | Functions.Equals | Functions.Not | Functions.Or | ConditionRef;
-export type YieldsString = Yields<CFString> | ReturnsString;
-export type ReturnsString = Returns<CFString> | Functions.Base64 | Functions.Join | Functions.Sub;
+export interface YieldsBrand<V> {
+    __brandYieldsValue: V;
+}
+export type Yields<V> = V | YieldsBrand<V>;
+export type YieldsString = Yields<CFString>;
+export type YieldsBoolean = Yields<CFBoolean>;
 
 /**
  * This is some sort of function or reference that ultimately yields a value of type V.
@@ -175,13 +201,10 @@ export interface HasUpdatePolicy {
     }
 }
 
-export interface Ref<K extends CFString = CFString> {
-    Ref: K;
+export interface Ref {
+    Ref: CFString;
 }
 
-export function Ref<K extends CFString>(ref: K): Ref<K> {
-    return {Ref: ref};
+export function Ref<V>(ref: Ref['Ref']): Ref & YieldsBrand<V> {
+    return {Ref: ref} as any;
 }
-
-// /** A Ref that we know refers to a specific type of value */
-// export interface RefReturns<K extends CFString, V> extends Ref<K>, ReturnsBrand<V> {}
