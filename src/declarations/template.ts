@@ -1,7 +1,7 @@
 // Very WIP typings for a CloudFormation stack template
 
-import { TODO, BooleanCondition, CFString, CFInteger, CFBoolean, Yields } from './common';
-import { Resource } from './generated/aws-cloudformation';
+import { TODO, BooleanCondition, CFString, CFInteger, CFBoolean, Yields } from './core';
+import { Resource } from './generated/cloudformation-types';
 
 export interface Template {
     AWSTemplateFormatVersion: '2010-09-09';

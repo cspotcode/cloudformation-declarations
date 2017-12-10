@@ -9,7 +9,7 @@ import { JSDOM } from 'jsdom';
 import { SpecFile, SpecType, SpecProperty } from './spec-file';
 
 const paths = {
-    generatedDeclaration: 'src/declarations/generated/aws-cloudformation.ts',
+    generatedDeclaration: 'src/declarations/generated/cloudformation-types.ts',
     docsCache: 'cache/html-docs.json',
     specificationsDirectory: 'specifications'
 };

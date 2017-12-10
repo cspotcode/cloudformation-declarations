@@ -2,6 +2,8 @@
 
 TypeScript declarations for writing CloudFormation stack templates, automatically generated from Amazon's specification files.
 
+*Subject to change while I tweak things and figure out a workflow that I like; still a work-in-progress.*
+
 Write your CloudFormation stack template in JavaScript or TypeScript with full IntelliSense from these declarations.
 Then `JSON.stringify()` the result to a `.json` file.
 

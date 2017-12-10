@@ -1,4 +1,4 @@
-import * as C from '../common';
+import * as C from '../core';
 export namespace AWS.ApiGateway {
     /**
      * The AWS::ApiGateway::Account resource specifies the AWS Identity and Access Management  (IAM) role that Amazon
