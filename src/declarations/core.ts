@@ -41,9 +41,10 @@ export interface ConditionRef {
  */
 // export type YieldsBrand<V> = V | ReturnsBrand<V>;
 
-export interface Value<V> {
+export interface ValueBrand<V> {
     __brandCloudfrontValue: V;
 }
+export type Value<V> = V | ValueBrand<V>;
 export type Yields<V> = Value<V>;
 export type YieldsString = Yields<CFString>;
 export type YieldsBoolean = Yields<CFBoolean>;
