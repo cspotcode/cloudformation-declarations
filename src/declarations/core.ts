@@ -6,17 +6,51 @@ export type TODO = any;
 export type Diff<T extends string, U extends string> = ({[P in T]: P } & {[P in U]: never } & { [x: string]: never })[T];
 export type Omit<T, K extends keyof T> = Pick<T, Diff<keyof T, K>>;
 
+/**
+ * Identity function for declaring types within deeply nested object literals.
+ * Normal Intellisense covers most situations.  However, when a property's type is `any` or is too loose,
+ * but you want Intellisense for a more specific interface, wrap the value in this function.
+ * 
+ *     const someBigObject: SomeBigInterface = {
+ *       aPropertyOfTypeAny: T<AWS.APIGateway.Account>({
+ *         Properties: {
+ *           // <-- get useful Intellisense for AWS.APIGateway.Account
+ *         }
+ *       })
+ *     }
+ * 
+ * For example, a stack's `Resources` object can contain any kind of Cloudfront
+ * resource so Intellisense isn't particularly helpful.  We already offer factory functions
+ * for all resources; for other situations, use `T`.
+ */
+export function T<V>(value: V): V {
+    return value;
+}
+
 /*
  * When Cloudformation talks about an "Integer", it's actually a JSON string made of digits. (e.g. `"100"`)
  * With that in mind, these types and corresponding factory functions help make it abundantly clear the correspondence
  * between Cloudfront types and JSON types.
  */
+
 export type CFString = string;
 export type CFBoolean = 'true' | 'false';
+/**
+ * Convert a JS number to a string.
+ * Cloudformation expects numbers as strings, presumably to avoid differences in the implementations of numbers in various JSON parsers and serializers.
+ */
 export function CFInteger(n: number) {return `${ n }`}
 export type CFInteger = string;
+/**
+ * Convert a JS number to a string.
+ * Cloudformation expects numbers as strings, presumably to avoid differences in the implementations of numbers in various JSON parsers and serializers.
+ */
 export function CFDouble(n: number) {return `${ n }`}
 export type CFDouble = string;
+/**
+ * Convert a JS number to a string.
+ * Cloudformation expects numbers as strings, presumably to avoid differences in the implementations of numbers in various JSON parsers and serializers.
+ */
 export function CFLong(n: number) {return `${ n }`}
 export type CFLong = string;
 export function CFTimestamp(d: string) {return d}
@@ -25,38 +59,28 @@ export type CFJson = object; // TODO
 export type CFList<T> = Array<T>;
 export type CFMap<T> = {[key: string]: T};
 
-/** For situations in which the *only* function you may use is a reference */
-export type LiteralOrRef<V = any> = V | Ref;
-
-export type BooleanCondition = Functions.And | Functions.Equals | Functions.Not | Functions.Or | ConditionRef;
+export type BooleanCondition = Effectively<CFBoolean, (Functions.And | Functions.Equals | Functions.Not | Functions.Or | ConditionRef)>;
 
 /** Reference to a conditional declared elsewhere in the stack template */
 export interface ConditionRef {
     Condition: ConditionId;
 }
-
-/**
- * Yields a value of type V.  In other words, can appear in the JSON where that type of value is expected and where functions are allowed to execute.
- * Can be a function that returns the value, or can be the literal value itself.
- */
-// export type YieldsBrand<V> = V | ReturnsBrand<V>;
-
-export interface ValueBrand<V> {
-    __brandCloudfrontValue: V;
+export function ConditionRef(conditionId: ConditionId): Effectively<CFBoolean, ConditionRef> {
+    return {Condition: conditionId} as any;
 }
-export type Value<V> = V | ValueBrand<V>;
-export type Yields<V> = Value<V>;
-export type YieldsString = Yields<CFString>;
-export type YieldsBoolean = Yields<CFBoolean>;
 
 /**
- * This is some sort of function or reference that ultimately yields a value of type V.
- * Allows the type system to understand what type a condition, value, reference, etc. will return.
+ * When we "lie" to the typesystem, a branding property stores the real type.
+ * For example, when we say that a {"Ref": ""} is actually a string,
+ * we also brand the return value with an interface.  Something like:
+ * 
+ *     string & {__cloudfrontIsActually: {Ref: string}}
+ * 
  */
-// interface ReturnsBrand<V> {
-//     /** DO NOT USE IN CODE.  This is just type system branding. */
-//     __brandReturnValue: V;
-// }
+export type Effectively<PretendingToBe, IsActually> = PretendingToBe & Actually<IsActually>;
+export interface Actually<T> {
+    __cloudfrontIsActually: T;
+}
 
 // TODO this is currently unused; where should it be used?
 export interface AbstractResource {
@@ -66,12 +90,4 @@ export interface AbstractResource {
     DeletionPolicy?: 'Delete' | 'Retain' | 'Snapshot';
     DependsOn?: CFString | Array<CFString>;
     Metadata?: object;
-}
-
-export interface Ref {
-    Ref: CFString;
-}
-
-export function Ref<V>(ref: Ref['Ref']): Ref & Value<V> {
-    return {Ref: ref} as any;
 }
