@@ -49,13 +49,6 @@ export type Yields<V> = Value<V>;
 export type YieldsString = Yields<CFString>;
 export type YieldsBoolean = Yields<CFBoolean>;
 
-// Brand native types so that they match our Value<> interface.
-declare global {
-    interface String extends Value<string> {}
-    interface Number extends Value<number> {}
-    interface Array<T> extends Value<Array<T>> {}
-}
-
 /**
  * This is some sort of function or reference that ultimately yields a value of type V.
  * Allows the type system to understand what type a condition, value, reference, etc. will return.
