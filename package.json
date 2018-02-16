@@ -3,10 +3,10 @@
   "version": "0.0.10",
   "description": "TypeScript declarations and helpers for writing CloudFormation templates in TS or JS.",
   "scripts": {
-    "test": "powershell -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1",
-    "build": "powershell -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1",
-    "compile": "powershell -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1",
-    "generate": "powershell -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1"
+    "test": "pwsh -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1",
+    "build": "pwsh -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1",
+    "compile": "pwsh -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1",
+    "generate": "pwsh -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1"
   },
   "keywords": [
     "AWS",
