@@ -65,11 +65,11 @@ type Ref = {"Ref": StringValue}
 
 ...where `StringValue` is either a string literal or any other CloudFormation function that can return a `string`, or some deeply nested combination of functions.  TypeScript is capable of modeling these possibilities, but it makes the types very complex, which makes tooling much less usable.
 
-> ![Endless union types](./docs/endless-union-types.gif)
+> ![Endless union types](https://raw.githubusercontent.com/cspotcode/cloudformation-typescript-declarations/master/docs/endless-union-types.gif)
 
 Instead, we expose a factory function for each CloudFormation function.  Each factory generates the correct JSON structure at runtime, but in TypeScript the return type is the value that will be returned by the CloudFormation function.
 
-> ![TS vs runtime types](./docs/fn-factory-claimed-return-type-vs-runtime.png)
+> ![TS vs runtime types](https://raw.githubusercontent.com/cspotcode/cloudformation-typescript-declarations/master/docs/fn-factory-claimed-return-type-vs-runtime.png)
 
 As far as TypeScript is concerned, `Sub()` returns a string.  We know better; it is actually creating an object, but that object can be used everywhere that CloudFormation expects a `string`.  We are lying to the type system, but in my experience this is the most pragmatic, productive solution.
 
@@ -77,7 +77,7 @@ As far as TypeScript is concerned, `Sub()` returns a string.  We know better; it
 
 Now our JSDoc popups are much easier to read:
 
-> ![Readable types](./docs/readable-types.gif)
+> ![Readable types](https://raw.githubusercontent.com/cspotcode/cloudformation-typescript-declarations/master/docs/readable-types.gif)
 
 # To rebuild
 
