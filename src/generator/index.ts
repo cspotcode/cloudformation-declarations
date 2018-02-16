@@ -77,7 +77,7 @@ async function main() {
 
     /** Generated type declaration .ts */
     const declaration = t `
-    import * as C from '../common';
+    import * as C from '../core';
     ${
         map(specs, (spec, path) => {
             const specJson: SpecFile = readJsonFile(`specifications/${ path }`);
@@ -122,7 +122,7 @@ async function main() {
                          * 
                          * Documentation: ${ v.Documentation }
                          */
-                        export interface ${ identifier } {
+                        export interface ${ identifier } extends C.CommonResourceProps {
                             Type: '${ k }' = '${ k }';
                             Properties: ${ propertiesIdentifierPath }
                         }
@@ -190,18 +190,14 @@ async function main() {
         throw new Error('Unexpected property');
     }
     function renderPrimitiveType(prim: string): string {
-        if(includes(['Boolean', 'String'], prim)) {
-            return `C.Yields${ prim }`;
-        } else {
-            return `C.Yields<C.CF${ prim }>`;
-        }
+        return `C.CF${ prim }`;
     }
     function renderPropertyType(findName: string, relativeTo: Namespace, generics?: Array<string>): string {
         const genericsStr = generics && generics.length ? `<${ generics.join(', ') }>` : '';
-        if(includes(['Map', 'List'], findName)) return `C.Yields<C.CF${ findName }${ genericsStr }>`;
+        if(includes(['Map', 'List'], findName)) return `C.CF${ findName }${ genericsStr }`;
         const ret = relativeTo.resolveType(findName)!.fullName();
         assert(typeof ret === 'string');
-        return `C.Yields<${ ret }${ genericsStr }>`;
+        return `${ ret }${ genericsStr }`;
     }
 
     writeFile(paths.generatedDeclaration, prettyPrintTs(declaration));
