@@ -34,6 +34,11 @@ export function T<V>(value: V): V {
  */
 
 export type CFString = string;
+/**
+ * Convert a JS boolean to a string.
+ * Cloudformation expects booleans to be either the string 'true' or 'false'.
+ */
+export function CFBoolean(b: boolean): CFBoolean {return `${ b }` as CFBoolean}
 export type CFBoolean = 'true' | 'false';
 /**
  * Convert a JS number to a string.
