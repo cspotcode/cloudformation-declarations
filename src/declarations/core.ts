@@ -83,8 +83,7 @@ export interface Actually<T> {
 }
 
 // TODO this is currently unused; where should it be used?
-export interface AbstractResource {
-    type: string;
+export interface CommonResourceProps {
     Condition?: ConditionId;
     // Properties?: {};
     DeletionPolicy?: 'Delete' | 'Retain' | 'Snapshot';

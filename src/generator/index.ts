@@ -77,7 +77,7 @@ async function main() {
 
     /** Generated type declaration .ts */
     const declaration = t `
-    import * as C from '../common';
+    import * as C from '../core';
     ${
         map(specs, (spec, path) => {
             const specJson: SpecFile = readJsonFile(`specifications/${ path }`);
@@ -122,7 +122,7 @@ async function main() {
                          * 
                          * Documentation: ${ v.Documentation }
                          */
-                        export interface ${ identifier } {
+                        export interface ${ identifier } extends C.CommonResourceProps {
                             Type: '${ k }' = '${ k }';
                             Properties: ${ propertiesIdentifierPath }
                         }
