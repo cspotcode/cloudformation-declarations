@@ -99,6 +99,10 @@ async function main() {
                 const identifierPath = namespace ? `${ namespace }.${ identifier }` : `${ identifier }`;
                 if(isResource) allResourceTypes.push(identifierPath);
                 const propertiesIdentifierPath = `${ identifierPath }.Properties`;
+                if(renderedIdentifierPaths.has(identifierPath)) {
+                    return `/* already emitted ${ identifierPath } */\n`;
+                }
+                renderedIdentifierPaths.add(identifierPath);
 
                 const $ = get$(v.Documentation);
 
