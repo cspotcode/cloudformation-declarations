@@ -19,13 +19,14 @@ async function main() {
 
     const specs: {[path: string]: SpecFile} = Object.create(null);
 
+    type Entry = {$: JQueryStatic, window: Window};
     /** Cache of parsed HTML documentation with JQuery instances, stored by URL. */
-    const parsedDocs = new (class extends Cache<string, {$: JQueryStatic, window: Window}> {
+    const parsedDocs = new (class extends Cache<string, Entry> {
         maxItems = 30;
-        dispose(v, k) {
+        dispose(v: Entry) {
             v.window.close();
         }
-        createItem(k, ck) {
+        createItem(k: string, ck: string) {
             const window = new JSDOM(docs[ck]).window;
             const $ = JQueryFactory(window);
             return {$, window};
@@ -75,6 +76,8 @@ async function main() {
 
     const allResourceTypes: Array<string> = [];
 
+    const renderedIdentifierPaths = new Set<string>();
+
     /** Generated type declaration .ts */
     const declaration = t `
     import * as C from '../core';
@@ -83,8 +86,8 @@ async function main() {
             const specJson: SpecFile = readJsonFile(`specifications/${ path }`);
 
             const allDeclarations = sortBy([
-                ...toPairs(specJson.ResourceTypes).map(v => [...v, 'resource']),
-                ...toPairs(specJson.PropertyTypes).map(v => [...v, 'property'])
+                ...toPairs(specJson.ResourceTypes).map(v => [...v, 'resource'] as [string, SpecType, 'resource']),
+                ...toPairs(specJson.PropertyTypes).map(v => [...v, 'property'] as [string, SpecType, 'property'])
             ], v => v[0]);
 
             return t`
@@ -97,12 +100,12 @@ async function main() {
                 const namespace = nameParts.slice(0, -1).join('.');
                 const identifier = nameParts[nameParts.length - 1];
                 const identifierPath = namespace ? `${ namespace }.${ identifier }` : `${ identifier }`;
-                if(isResource) allResourceTypes.push(identifierPath);
-                const propertiesIdentifierPath = `${ identifierPath }.Properties`;
                 if(renderedIdentifierPaths.has(identifierPath)) {
                     return `/* already emitted ${ identifierPath } */\n`;
                 }
                 renderedIdentifierPaths.add(identifierPath);
+                if(isResource) allResourceTypes.push(identifierPath);
+                const propertiesIdentifierPath = `${ identifierPath }.Properties`;
 
                 const $ = get$(v.Documentation);
 
@@ -232,7 +235,6 @@ class Type extends Shared {
 class Namespace extends Shared {
     _namespaces = new Map<string, Namespace>();
     _types = new Map<string, Type>();
-    _parent: Namespace | null;
     getOrCreateChildType(awsFullName: string | Array<string>): Type {
         if(typeof awsFullName === 'string') awsFullName = this._splitPath(awsFullName);
         if(awsFullName.length === 1) {
