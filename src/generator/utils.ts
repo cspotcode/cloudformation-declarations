@@ -90,8 +90,15 @@ export function readFile(path: string): string {
     return fs.readFileSync(path, 'utf8');
 }
 
-export function readJsonFile(path: string): any {
-    return JSON.parse(readFile(path));
+export function readJsonFile(path: string, defaultValue?: any): any {
+    try {
+        return JSON.parse(readFile(path));
+    } catch(e) {
+        if(defaultValue !== undefined) {
+            return defaultValue;
+        }
+        throw e;
+    }
 }
 
 export function writeJsonFile(path: string, val: any): void {

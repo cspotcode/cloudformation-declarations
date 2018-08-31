@@ -36,7 +36,7 @@ async function main() {
 
     const docs: {[url: string]: string} = Object.create(null);
     // Pull docs from filesystem cache to avoid re-downloading all of them again.
-    Object.assign(docs, readJsonFile(paths.docsCache));
+    Object.assign(docs, readJsonFile(paths.docsCache, {}));
 
     // Load all AWS specs into memory
     globSync('**.json', {cwd: paths.specificationsDirectory}).map(path => {
