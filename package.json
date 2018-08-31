@@ -1,6 +1,6 @@
 {
   "name": "cloudformation-declarations",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "TypeScript declarations and helpers for writing CloudFormation templates in TS or JS.",
   "scripts": {
     "test": "pwsh -NoProfile -ExecutionPolicy RemoteSigned -File ./scripts/npm-run.ps1",
